@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Portfolio</title>
+    <base href="~/" />
+    <!--<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,es5"></script>-->
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2Ces5"></script> <!--Required for IE support. https://devhints.io/polyfill.io-->
+    <!--<script>if (!(window.Promise && [].includes && Object.assign && window.Map)) { document.write('<script src="https://cdn.polyfill.io/v3/polyfill.min.js"></scr' + 'ipt>') }</script>-->
+
+    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/dist/site.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    @RenderBody()
+
+    <script src="~/dist/vendor.js" asp-append-version="true"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
