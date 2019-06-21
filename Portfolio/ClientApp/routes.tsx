@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
-import { Home } from './components/Home';
+import { RouteContainer } from './RouteContainer';
 
 export const routes = <Layout>
-    <Route exact path='/' render={(props: any) => <Home {...props} />} />
+    <Route path='/' render={(props: any) => <RouteContainer {...props} />} />
 </Layout>;

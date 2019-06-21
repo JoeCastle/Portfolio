@@ -1,0 +1,25 @@
+﻿div.navmain {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+
+    .navbar {
+        border-radius: 0px;
+
+        .nav-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .navbar-nav {
+                flex-direction: row;
+            }
+        }
+    }
+}

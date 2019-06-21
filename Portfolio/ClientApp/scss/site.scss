@@ -1,4 +1,6 @@
-﻿.main-nav li .glyphicon {
+﻿@import 'navbar.scss';
+
+.main-nav li .glyphicon {
     margin-right: 10px;
 }
 
@@ -70,4 +72,14 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+}
+
+html, body, #react-app, #react-app > .container-fluid, .page-parent {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    margin-top: 62px;
 }
