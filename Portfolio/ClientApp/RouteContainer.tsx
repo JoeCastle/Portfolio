@@ -1,7 +1,7 @@
 ﻿import * as React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { Home } from './components/Home';
-import { FourZeroFour } from './components/FourZeroFour';
+import { Home } from './components/pages/Home';
+import { FourZeroFour } from './components/pages/FourZeroFour';
 import { NavMenu } from './components/NavMenu';
 import { RouteComponentProps } from 'react-router';
 
