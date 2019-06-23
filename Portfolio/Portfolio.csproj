@@ -23,12 +23,16 @@
   <ItemGroup>
     <None Remove="ClientApp\components\FourZeroFour.tsx" />
     <None Remove="ClientApp\components\Introduction.tsx" />
+    <None Remove="ClientApp\components\ProjectsSummary.tsx" />
+    <None Remove="ClientApp\components\ProjectsSummaryTile.tsx" />
     <None Remove="ClientApp\components\RouteContainer.tsx" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\components\pages\FourZeroFour.tsx" />
     <TypeScriptCompile Include="ClientApp\components\Introduction.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\ProjectsSummary.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\ProjectsSummaryTile.tsx" />
     <TypeScriptCompile Include="ClientApp\RouteContainer.tsx" />
   </ItemGroup>
 
