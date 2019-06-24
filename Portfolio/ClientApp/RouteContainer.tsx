@@ -30,11 +30,7 @@ export class RouteContainer extends React.Component<Props> {
                         path={`${match.url}Project/ShoothillWebsite`}
                         render={(props: any) =>
                             <Project
-                                title='Shoothill'
-                                description='desc'
-                                technologies={['tech1', 'tech2', 'tech3']}
-                                tags={['tag1', 'tag2', 'tag3']}
-                                img='img'
+                                projectName='shoothillWebsite'
                                 {...props}
                             />
                         }
