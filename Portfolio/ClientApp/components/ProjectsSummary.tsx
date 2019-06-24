@@ -6,6 +6,7 @@ import { ProjectsSummaryTile } from './ProjectsSummaryTile';
 interface Props extends RouteComponentProps<any>, React.Props<any> {
 }
 
+//Personal, University, Placement, Job
 export class ProjectsSummary extends React.Component<Props> {
     public render() {
         return <div>

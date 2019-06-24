@@ -3,7 +3,7 @@ import { RouteComponentProps } from 'react-router';
 
 //Clicking on the summary tile will navigate to a seperate page.
 //Should be able to navigate to the page directly using URL.
-interface IProjectsSummaryTileProps {
+interface IProjectProps {
     title: string;
     description: string;
     technologies: string[]; //The technologies used to develop the project.
@@ -17,10 +17,10 @@ interface IProjectsSummaryTileProps {
     screenshots?: string[]; //List of all available screenshots, to be put into lightbox or carousel.
 }
 
-interface Props extends RouteComponentProps<any>, React.Props<any>, IProjectsSummaryTileProps {
+interface Props extends RouteComponentProps<any>, React.Props<any>, IProjectProps {
 }
 
-export class ProjectsSummaryTile extends React.Component<Props> {
+export class Project extends React.Component<Props> {
     public render() {
         return <div className='project-summary-tile'>
             <div>{this.props.img || 'test'}</div>
