@@ -27,7 +27,10 @@
     <None Remove="ClientApp\components\ProjectsSummary.tsx" />
     <None Remove="ClientApp\components\ProjectsSummaryTile.tsx" />
     <None Remove="ClientApp\components\RouteContainer.tsx" />
+    <None Remove="ClientApp\components\SkillsSummary.tsx" />
+    <None Remove="ClientApp\components\SkillsSummaryTile.tsx" />
     <None Remove="ClientApp\data\projects.ts" />
+    <None Remove="ClientApp\data\skills.ts" />
     <None Remove="ClientApp\utils\utils.ts" />
   </ItemGroup>
 
@@ -37,7 +40,10 @@
     <TypeScriptCompile Include="ClientApp\components\pages\Project.tsx" />
     <TypeScriptCompile Include="ClientApp\components\ProjectsSummary.tsx" />
     <TypeScriptCompile Include="ClientApp\components\ProjectsSummaryTile.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\SkillsSummary.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\SkillsSummaryTile.tsx" />
     <TypeScriptCompile Include="ClientApp\data\projects.ts" />
+    <TypeScriptCompile Include="ClientApp\data\skills.ts" />
     <TypeScriptCompile Include="ClientApp\RouteContainer.tsx" />
     <TypeScriptCompile Include="ClientApp\utils\utils.ts" />
   </ItemGroup>
