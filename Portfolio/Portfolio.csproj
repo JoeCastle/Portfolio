@@ -28,6 +28,7 @@
     <None Remove="ClientApp\components\ProjectsSummaryTile.tsx" />
     <None Remove="ClientApp\components\RouteContainer.tsx" />
     <None Remove="ClientApp\data\projects.ts" />
+    <None Remove="ClientApp\utils\utils.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +39,7 @@
     <TypeScriptCompile Include="ClientApp\components\ProjectsSummaryTile.tsx" />
     <TypeScriptCompile Include="ClientApp\data\projects.ts" />
     <TypeScriptCompile Include="ClientApp\RouteContainer.tsx" />
+    <TypeScriptCompile Include="ClientApp\utils\utils.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

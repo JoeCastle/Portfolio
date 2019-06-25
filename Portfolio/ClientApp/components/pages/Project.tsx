@@ -1,6 +1,7 @@
 ﻿import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 import projects from '../../data/projects';
+import utils from '../../utils/utils';
 
 //Clicking on the summary tile will navigate to a seperate page.
 //Should be able to navigate to the page directly using URL.
@@ -15,22 +16,18 @@ export class Project extends React.Component<Props> {
 
     public render() {
 
-        let projName = typeof this.props.projectName != 'undefined' ? this.props.projectName : 'default'; //Move to seperate util/helper function
-        projName = projName != '' ? projName : 'default';
+        let projName = '';
+
+        projName = utils.verifyProjName(this.props.projectName);
 
         let project = projects.find(project => project.projectName === projName);
 
         return <div className='project-summary-tile'>
+            <h1>{project!.attributes.title}</h1>
             <div>{project!.attributes.img || 'test'}</div>
-            <div>{project!.attributes.title}</div>
-            {/*<div>{replaceLineBreaksWithHTML(project!.attributes.description)}</div>*/}
             {project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}
             <div>{project!.attributes.technologies}</div>
             <div>{project!.attributes.tags}</div>
         </div>;
     }
-}
-
-function replaceLineBreaksWithHTML(text: string) {
-    return text !== undefined ? text.replace(/\n/g, '<br/>') : "";
 }

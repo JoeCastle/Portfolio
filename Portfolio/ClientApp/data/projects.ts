@@ -7,6 +7,7 @@ interface IAttributes {
     tags: string[];
     img: string;
     readMoreLink: string;
+    routeURL: string;
 }
 
 interface IProject {
@@ -24,18 +25,20 @@ let projects: IProject[] = [
             technologies: ['tech1', 'tech2', 'tech3'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
-            readMoreLink: ''
+            readMoreLink: '/404',
+            routeURL: '404'
         }
     },
     {
         projectName: 'shoothillWebsite',
         attributes: {
             title: 'Shoothill Website',
-            description: ['desc \n \n test', 'test', 'test'],
+            description: ['desc', 'test', 'test'],
             technologies: ['tech1', 'tech2', 'tech3'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
-            readMoreLink: '/Projects/ShoothillWebsite'
+            readMoreLink: '/Projects/ShoothillWebsite',
+            routeURL: 'Projects/ShoothillWebsite'
         },
     },
     {
@@ -46,7 +49,8 @@ let projects: IProject[] = [
             technologies: ['tech1', 'tech2', 'tech3'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
-            readMoreLink: '/Projects/ArlaBOB'
+            readMoreLink: '/Projects/ArlaBOB',
+            routeURL: 'Projects/ArlaBOB'
         }
     }
 ];

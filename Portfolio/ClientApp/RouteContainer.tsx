@@ -5,6 +5,7 @@ import { FourZeroFour } from './components/pages/FourZeroFour';
 import { NavMenu } from './components/NavMenu';
 import { RouteComponentProps } from 'react-router';
 import { Project } from './components/pages/Project';
+import projects from './data/projects';
 
 interface Props extends RouteComponentProps<any>, React.Props<any> {
 
@@ -25,31 +26,22 @@ export class RouteContainer extends React.Component<Props> {
                     <Route exact path={`${match.url}`} render={(props: any) => <Home {...props} />} />
 
                     {/*https://www.codereadability.com/replacing-if-statements-with-object-lookups/ */}
-                    <Route
-                        exact
-                        path={`${match.url}Projects/ShoothillWebsite`}
-                        render={(props: any) =>
-                            <Project
-                                projectName='shoothillWebsite'
-                                {...props}
+                    {projects
+                        .filter(item =>
+                            item.projectName != 'default')
+                        .map((item, i) =>
+                            <Route
+                                exact
+                                path={`${match.url}${item.attributes.routeURL}`}
+                                render={(props: any) =>
+                                    <Project
+                                        key={i}
+                                        projectName={item.projectName}
+                                        {...props}
+                                    />
+                                }
                             />
-                        }
-                    />
-
-                    <Route
-                        exact
-                        path={`${match.url}Projects/ArlaBOB`}
-                        render={(props: any) =>
-                            <Project
-                                title='ArlaBOB'
-                                description='desc'
-                                technologies={['tech1', 'tech2', 'tech3']}
-                                tags={['tag1', 'tag2', 'tag3']}
-                                img='img'
-                                {...props}
-                            />
-                        }
-                    />
+                        )}
 
                     {/* Will catch any route not defined and redirect to the 404 page. */}
                     <Route path={`${match.url}404`} component={FourZeroFour} />
