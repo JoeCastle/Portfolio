@@ -21,9 +21,14 @@ export class Project extends React.Component<Props> {
         return <div className='project-summary-tile'>
             <div>{project!.attributes.img || 'test'}</div>
             <div>{project!.attributes.title}</div>
-            <div>{project!.attributes.description}</div>
+            {/*<div>{replaceLineBreaksWithHTML(project!.attributes.description)}</div>*/}
+            {project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}
             <div>{project!.attributes.technologies}</div>
             <div>{project!.attributes.tags}</div>
         </div>;
     }
+}
+
+function replaceLineBreaksWithHTML(text: string) {
+    return text !== undefined ? text.replace(/\n/g, '<br/>') : "";
 }
