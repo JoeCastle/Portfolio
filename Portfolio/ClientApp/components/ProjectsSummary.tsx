@@ -14,27 +14,15 @@ export class ProjectsSummary extends React.Component<Props> {
             <p>Below is a list of projects I have developed or collaborated on:</p>
             <div className='project-summary-tiles'>
                 <ProjectsSummaryTile
-                    title='title'
-                    description='desc'
-                    technologies={['tech1', 'tech2', 'tech3']}
-                    tags={['tag1', 'tag2', 'tag3']}
-                    img='img'
+                    projectName='shoothillWebsite'
                     {...this.props}
                 />
                 <ProjectsSummaryTile
-                    title='title'
-                    description='desc'
-                    technologies={['tech1', 'tech2', 'tech3']}
-                    tags={['tag1', 'tag2', 'tag3']}
-                    img='img'
+                    projectName='arlaBob'
                     {...this.props}
                 />
                 <ProjectsSummaryTile
-                    title='title'
-                    description='desc'
-                    technologies={['tech1', 'tech2', 'tech3']}
-                    tags={['tag1', 'tag2', 'tag3']}
-                    img='img'
+                    projectName=''
                     {...this.props}
                 />
             </div>

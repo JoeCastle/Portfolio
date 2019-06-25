@@ -15,7 +15,9 @@ export class Project extends React.Component<Props> {
 
     public render() {
 
-        let projName = typeof this.props.projectName != 'undefined' ? this.props.projectName : "default";
+        let projName = typeof this.props.projectName != 'undefined' ? this.props.projectName : 'default'; //Move to seperate util/helper function
+        projName = projName != '' ? projName : 'default';
+
         let project = projects.find(project => project.projectName === projName);
 
         return <div className='project-summary-tile'>

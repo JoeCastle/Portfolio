@@ -27,7 +27,7 @@ export class RouteContainer extends React.Component<Props> {
                     {/*https://www.codereadability.com/replacing-if-statements-with-object-lookups/ */}
                     <Route
                         exact
-                        path={`${match.url}Project/ShoothillWebsite`}
+                        path={`${match.url}Projects/ShoothillWebsite`}
                         render={(props: any) =>
                             <Project
                                 projectName='shoothillWebsite'
@@ -38,7 +38,7 @@ export class RouteContainer extends React.Component<Props> {
 
                     <Route
                         exact
-                        path={`${match.url}Project/ArlaBOB`}
+                        path={`${match.url}Projects/ArlaBOB`}
                         render={(props: any) =>
                             <Project
                                 title='ArlaBOB'
