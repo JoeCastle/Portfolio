@@ -12,6 +12,9 @@ interface IProjectProps {
 interface Props extends RouteComponentProps<any>, React.Props<any>, IProjectProps {
 }
 
+//TODO: Create lists for what projects should be included in each section. (in js object)
+//Summary will have latest or best.
+//All projects will have all, then filtered.
 
 export class ProjectsSummaryTile extends React.Component<Props> {
     public render() {
