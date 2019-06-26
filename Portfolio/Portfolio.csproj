@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\components\ContactForm.tsx" />
     <None Remove="ClientApp\components\FourZeroFour.tsx" />
     <None Remove="ClientApp\components\Introduction.tsx" />
     <None Remove="ClientApp\components\pages\Project.tsx" />
@@ -35,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\ContactForm.tsx" />
     <TypeScriptCompile Include="ClientApp\components\pages\FourZeroFour.tsx" />
     <TypeScriptCompile Include="ClientApp\components\Introduction.tsx" />
     <TypeScriptCompile Include="ClientApp\components\pages\Project.tsx" />

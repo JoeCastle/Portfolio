@@ -9,6 +9,7 @@ import { RouteComponentProps } from 'react-router';
 import { Introduction } from '../Introduction';
 import { ProjectsSummary } from '../ProjectsSummary';
 import { SkillsSummary } from '../SkillsSummary';
+import { ContactForm } from '../ContactForm';
 
 interface Props extends RouteComponentProps<any>, React.Props<any> {
 }
@@ -19,6 +20,7 @@ export class Home extends React.Component<Props> {
             <Introduction {...this.props} />
             <ProjectsSummary {...this.props} />
             <SkillsSummary {...this.props} />
+            <ContactForm {...this.props} />
         </div>;
     }
 }

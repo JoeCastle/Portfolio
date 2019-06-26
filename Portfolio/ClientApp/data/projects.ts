@@ -55,4 +55,49 @@ let projects: IProject[] = [
     }
 ];
 
+/*export let projects2 = [
+    {
+        default: {
+            projectName: 'default',
+            attributes: {
+                title: 'No Project Selected',
+                description: ['desc', 'test', 'test'],
+                technologies: ['tech1', 'tech2', 'tech3'],
+                tags: ['tag1', 'tag2', 'tag3'],
+                img: '/img/car.jpg',
+                readMoreLink: '/404',
+                routeURL: '404'
+            }
+        }
+    },
+    {
+        shoothillWebsite: {
+            projectName: 'shoothillWebsite',
+            attributes: {
+                title: 'Shoothill Website',
+                description: ['desc', 'test', 'test'],
+                technologies: ['tech1', 'tech2', 'tech3'],
+                tags: ['tag1', 'tag2', 'tag3'],
+                img: '/img/car.jpg',
+                readMoreLink: '/Projects/ShoothillWebsite',
+                routeURL: 'Projects/ShoothillWebsite'
+            },
+        }
+    },
+    {
+        arlaBob: {
+            projectName: 'arlaBob',
+            attributes: {
+                title: 'bob',
+                description: ['desc', 'test', 'test'],
+                technologies: ['tech1', 'tech2', 'tech3'],
+                tags: ['tag1', 'tag2', 'tag3'],
+                img: '/img/car.jpg',
+                readMoreLink: '/Projects/ArlaBOB',
+                routeURL: 'Projects/ArlaBOB'
+            }
+        }
+    }
+];*/
+
 export default projects;
