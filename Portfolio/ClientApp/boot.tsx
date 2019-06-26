@@ -12,7 +12,7 @@ import 'core-js/features/number/is-nan';*/
 //import 'core-js/es6/symbol';
 
 import './scss/site.scss';
-//import 'bootstrap';
+import 'bootstrap';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';

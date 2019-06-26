@@ -10,7 +10,7 @@ export class Introduction extends React.Component<Props> {
             <h1>Joseph Castle</h1>
             {/*<p>Hey, my name is Joe and I'm a software developer.</p>*/}
             <p>Hey, my name is Joe and I've recently achieved a 1st class degree in BSc (Hons) Computer Science (Software Engineering) with Placement at the University of Wolverhampton. My aim is to become a Software Developer.</p>
-            
+            <p>I currently live in Wolverhampton, UK and I am looking for a job as a Software Developer.</p>
         </div>;
     }
 }

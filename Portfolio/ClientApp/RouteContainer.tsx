@@ -31,11 +31,12 @@ export class RouteContainer extends React.Component<Props> {
                             item.projectName != 'default')
                         .map((item, i) =>
                             <Route
+                                key={i}
                                 exact
                                 path={`${match.url}${item.attributes.routeURL}`}
                                 render={(props: any) =>
                                     <Project
-                                        key={i}
+                                        key={item}
                                         projectName={item.projectName}
                                         {...props}
                                     />
