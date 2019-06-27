@@ -28,7 +28,7 @@ export class ContactForm extends React.Component<Props, State> {
 
     handleSubmit(e: any) {
         e.preventDefault();
-        fetch('/', {
+        fetch('api/Contact/SendEmail', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(this.state)
