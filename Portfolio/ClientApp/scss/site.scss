@@ -1,5 +1,10 @@
 ﻿@import 'navbar.scss';
 @import 'variables.scss';
+@import 'contact.scss';
+
+html {
+    font-size: 100%;
+}
 
 html, body, #react-app, #react-app > .container-fluid, .page-parent {
     height: 100%;

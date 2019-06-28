@@ -3,6 +3,8 @@ import { RouteComponentProps } from 'react-router';
 import { Link } from "react-router-dom";
 import projects from '../data/projects';
 import utils from '../utils/utils';
+//import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, CardImgOverlay } from 'reactstrap';
+//import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.css';
 
 //Clicking on the summary tile will navigate to a seperate page.
 //Should be able to navigate to the page directly using URL.
@@ -33,6 +35,29 @@ export class ProjectsSummaryTile extends React.Component<Props> {
             <div>{project!.attributes.technologies}</div>
             <div>{project!.attributes.tags}</div>
             <Link to={project!.attributes.readMoreLink}>Read More -></Link>
+
+            {/* https://reactstrap.github.io/components/card/ */}
+
+            {/*<Card>
+                <CardImg top width="100%" src="http://placekitten.com/300/200" alt="Card image cap" />
+                <CardBody>
+                    <CardTitle>{project!.attributes.title}</CardTitle>
+                    <CardSubtitle>Card subtitle</CardSubtitle>
+                    <CardText>{project!.attributes.description[0]}...</CardText>
+                    <Link to={project!.attributes.readMoreLink}>Read More -></Link>
+                </CardBody>
+            </Card>
+
+            <Card inverse>
+                <CardImg width="100%" src="http://placekitten.com/300/200" alt="Card image cap" />
+                <CardImgOverlay>
+                    <CardTitle>Card Title</CardTitle>
+                    <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                    <CardText>
+                        <small className="text-muted">Last updated 3 mins ago</small>
+                    </CardText>
+                </CardImgOverlay>
+            </Card>*/}
         </div>;
     }
 }
