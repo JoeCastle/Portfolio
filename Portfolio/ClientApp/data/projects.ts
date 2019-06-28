@@ -44,7 +44,7 @@ let projects: IProject[] = [
     {
         projectName: 'arlaBob',
         attributes: {
-            title: 'bob',
+            title: 'Arla Bob',
             description: ['desc', 'test', 'test'],
             technologies: ['tech1', 'tech2', 'tech3'],
             tags: ['tag1', 'tag2', 'tag3'],
@@ -52,7 +52,56 @@ let projects: IProject[] = [
             readMoreLink: '/Projects/ArlaBOB',
             routeURL: 'Projects/ArlaBOB'
         }
+    },
+    {
+        projectName: 'portfolio',
+        attributes: {
+            title: 'Portfolio',
+            description: ['desc', 'test', 'test'],
+            technologies: ['tech1', 'tech2', 'tech3'],
+            tags: ['tag1', 'tag2', 'tag3'],
+            img: '/img/car.jpg',
+            readMoreLink: '/Projects/Portfolio',
+            routeURL: 'Projects/Portfolio'
+        }
+    },
+    {
+        projectName: 'trainingApp',
+        attributes: {
+            title: 'Training App',
+            description: ['desc', 'test', 'test'],
+            technologies: ['tech1', 'tech2', 'tech3'],
+            tags: ['tag1', 'tag2', 'tag3'],
+            img: '/img/car.jpg',
+            readMoreLink: '/Projects/TrainingApp',
+            routeURL: 'Projects/TrainingApp'
+        }
+    },
+    {
+        projectName: 'arduinoTemperatureSensor',
+        attributes: {
+            title: 'Arduino Temperature Sensor',
+            description: ['desc', 'test', 'test'],
+            technologies: ['tech1', 'tech2', 'tech3'],
+            tags: ['tag1', 'tag2', 'tag3'],
+            img: '/img/car.jpg',
+            readMoreLink: '/Projects/ArduinoTemperatureSensor',
+            routeURL: 'Projects/ArduinoTemperatureSensor'
+        }
+    },
+    {
+        projectName: 'startPage',
+        attributes: {
+            title: 'Startpage',
+            description: ['desc', 'test', 'test'],
+            technologies: ['tech1', 'tech2', 'tech3'],
+            tags: ['tag1', 'tag2', 'tag3'],
+            img: '/img/car.jpg',
+            readMoreLink: '/Projects/Startpage',
+            routeURL: 'Projects/Startpage'
+        }
     }
+
 ];
 
 /*export let projects2 = [

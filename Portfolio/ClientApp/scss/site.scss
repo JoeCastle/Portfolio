@@ -1,6 +1,7 @@
 ﻿@import 'navbar.scss';
 @import 'variables.scss';
 @import 'contact.scss';
+@import 'project.scss';
 
 html {
     font-size: 100%;
@@ -22,9 +23,4 @@ main {
 .page-parent {
     display: flex;
     justify-content: center;
-}
-
-.project-summary-tiles {
-    display: flex;
-    flex-direction: row;
 }

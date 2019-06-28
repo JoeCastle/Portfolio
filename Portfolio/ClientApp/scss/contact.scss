@@ -10,6 +10,7 @@
         flex-direction: row;
         padding-top: 20px;
         padding-bottom: 20px;
+        flex: 1 0 auto; //IE fix
     }
 
     > a {
@@ -25,6 +26,10 @@
 
 .contact-form {
     flex: 1 0 70%;
+
+    @media (max-width: 800px) {
+        flex: 1 0 auto; //IE fix
+    }
 
     textarea {
         height: 100px;
@@ -54,6 +59,14 @@
     justify-content: space-between;
 
     > .form-group {
-        flex: 0 1 49%;
+        width: 49%;
+
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
     }
 }

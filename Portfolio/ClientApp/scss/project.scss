@@ -1,0 +1,74 @@
+﻿@import 'variables.scss';
+
+.project-summary-tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .project-summary-tile {
+        height: 300px;
+        border: 1px solid;
+        margin-bottom: 15px;
+        flex: 1 1 300px; //250px
+        margin: 10px;
+        width: 30%;
+        max-width: 300px;
+        border-radius: 4px;
+
+        @media (max-width: 698px) {
+            width: 100%;
+            max-width: 100%;
+            flex: 1 1 auto;
+            height: 200px;
+        }
+
+        img {
+            width: 100%;
+
+            @media (max-width: 698px) {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+.project-summary-tile {
+    position: relative;
+    transition: .3s ease;
+}
+
+.project-tile-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(40, 44, 45, 0.75);
+}
+
+.project-summary-tile:hover .project-tile-overlay {
+    opacity: 1;
+}
+
+.project-summary-tile:hover {
+    transform: scale(1.02);
+}
+
+.overlay-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

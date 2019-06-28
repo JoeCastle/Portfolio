@@ -29,13 +29,14 @@ export class ProjectsSummaryTile extends React.Component<Props> {
         let project = projects.find(project => project.projectName === projName);
 
         return <div className='project-summary-tile'>
-            <div>{project!.attributes.img || 'test'}</div>
+            <img src="http://placekitten.com/300/200" alt="Card image cap" />
             <div>{project!.attributes.title}</div>
-            {project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}
-            <div>{project!.attributes.technologies}</div>
-            <div>{project!.attributes.tags}</div>
+            {/*{project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}*/}
+            <div>{project!.attributes.description[0]}</div>
             <Link to={project!.attributes.readMoreLink}>Read More -></Link>
-
+            <div className='project-tile-overlay'>
+                <div className='overlay-text'>Hello World</div>
+            </div>
             {/* https://reactstrap.github.io/components/card/ */}
 
             {/*<Card>
