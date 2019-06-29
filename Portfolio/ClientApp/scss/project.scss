@@ -7,7 +7,7 @@
     justify-content: center;
 
     .project-summary-tile {
-        height: 300px;
+        height: 310px;
         border: 1px solid;
         margin-bottom: 15px;
         flex: 1 1 300px; //250px
@@ -15,26 +15,82 @@
         width: 30%;
         max-width: 300px;
         border-radius: 4px;
+        position: relative;
 
         @media (max-width: 698px) {
             width: 100%;
             max-width: 100%;
             flex: 1 1 auto;
-            height: 200px;
+            height: 152px;
+            flex-direction: row;
+            display: flex;
+        }
+
+        @media (max-width: 520px) {
+            max-height: 120px;
         }
 
         img {
             width: 100%;
 
             @media (max-width: 698px) {
+                display: block;
+                max-width: 240px;
+                max-height: 150px;
                 width: auto;
-                height: 100%;
+                height: auto;
             }
+
+            @media (max-width: 520px) {
+                display: none;
+            }
+        }
+
+        .project-summary-tile-content {
+            padding: 5px;
+            width: 100%;
+        }
+
+        a {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .project-summary-tile-title {
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+        //https://stackoverflow.com/a/53156390/5547950
+        $font-size: 14px;
+        $line-height: 1.4;
+        $lines-to-show: 3;
+
+        .project-summary-tile-desc {
+            display: block; /* Fallback for non-webkit */
+            display: -webkit-box;
+            max-width: 400px;
+            height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+            margin: 0 auto;
+            font-size: $font-size;
+            line-height: $line-height;
+            -webkit-line-clamp: $lines-to-show;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 }
 
+.project-summary-tile:hover {
+    transform: scale(1.02);
+    box-shadow: 6px 6px 10px -4px rgba(0,0,0,0.45);
+}
 
+
+
+/*
 .project-summary-tile {
     position: relative;
     transition: .3s ease;
@@ -72,3 +128,4 @@
     transform: translate(-50%, -50%);
     text-align: center;
 }
+    */

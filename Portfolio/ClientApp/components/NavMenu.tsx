@@ -74,36 +74,46 @@ export class NavMenu extends React.Component<Props> {
 
             <div className='navbar navbar-inverse'>
                 <div className='nav-container'>
-                <div className='navbar-header'>
-                    <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
-                        <span className='sr-only'>Toggle navigation</span>
-                        <span className='icon-bar'></span>
-                        <span className='icon-bar'></span>
-                        <span className='icon-bar'></span>
-                    </button>
-                    <Link className='navbar-brand' to={'/'}>Joseph Castle</Link>
+                    <div className='navbar-header'>
+                        <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                            <span className='sr-only'>Toggle navigation</span>
+                            <span className='icon-bar'></span>
+                            <span className='icon-bar'></span>
+                            <span className='icon-bar'></span>
+                        </button>
+                        <Link className='navbar-brand' to={'/'}><h1>Joseph Castle</h1></Link>
+                    </div>
+                    <div className='clearfix'></div>
+                    <div className='navbar-collapse collapse'>
+                        <ul className='nav navbar-nav'>
+                            <li>
+                                <NavLink to={'/'} exact activeClassName='active'>
+                                    <span className='glyphicon glyphicon-home'></span> Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={'#About'} exact activeClassName='active'>
+                                    <span className='glyphicon glyphicon-home'></span> About
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={'#Projects'} exact activeClassName='active'>
+                                    <span className='glyphicon glyphicon-home'></span> Projects
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={'#Skills'} exact activeClassName='active'>
+                                    <span className='glyphicon glyphicon-home'></span> Skills
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={'#Contact'} exact activeClassName='active'>
+                                    <span className='glyphicon glyphicon-home'></span> Contact
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div className='clearfix'></div>
-                <div className='navbar-collapse collapse'>
-                    <ul className='nav navbar-nav'>
-                        <li>
-                            <NavLink to={ '/' } exact activeClassName='active'>
-                                <span className='glyphicon glyphicon-home'></span> Home
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={'/'} exact activeClassName='active'>
-                                <span className='glyphicon glyphicon-home'></span> Home
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={'/'} exact activeClassName='active'>
-                                <span className='glyphicon glyphicon-home'></span> Home
-                            </NavLink>
-                        </li>
-                    </ul>
-                    </div>
-                    </div>
             </div>
 
         </div>;

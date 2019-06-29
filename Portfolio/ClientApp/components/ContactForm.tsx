@@ -34,16 +34,17 @@ export class ContactForm extends React.Component<Props, State> {
             body: JSON.stringify(this.state)
         });
 
-        console.log(this.state);
+        //console.log(this.state);
     };
 
 
     public render() {
-        return <div className='contact-form-info-container'>
-            <h2>Contact:</h2>
-            <p>Here you can send me an email if you have any questions:</p>
+        return <div className='contact-form-info-container section'>
+            <div className='content-container'>
+                <h2>Contact:</h2>
+                <p>Here you can send me an email if you have any questions:</p>
 
-            {/*<form>
+                {/*<form>
 
                 <label htmlFor='fullname'>Full Name</label>
                 <input type='text' id='fullname' name='fullname' placeholder='Your full name...' />
@@ -58,54 +59,54 @@ export class ContactForm extends React.Component<Props, State> {
 
             </form>*/}
 
-            <div className='contact-form-info'>
+                <div className='contact-form-info'>
 
-                <div className='contact-info'>
-                    <a target='_blank' rel='noopener noreferrer' href='https://linkedin.com/in/joseph-castle-19170b188'><i className='fab fa-linkedin-in'></i> Joseph Castle</a>
-                    <a href='mailto:joe@tcastle.co.uk'><i className='fas fa-at'></i> joe@tcastle.co.uk</a>
-                    <a target='_blank' rel='noopener noreferrer' href='https://github.com/JoeCastle'><i className='fab fa-github'></i> JoeCastle</a>
-                </div>
+                    <div className='contact-info'>
+                        <a target='_blank' rel='noopener noreferrer' href='https://linkedin.com/in/joseph-castle-19170b188'><i className='fab fa-linkedin-in'></i> Joseph Castle</a>
+                        <a href='mailto:joe@tcastle.co.uk'><i className='fas fa-at'></i> joe@tcastle.co.uk</a>
+                        <a target='_blank' rel='noopener noreferrer' href='https://github.com/JoeCastle'><i className='fab fa-github'></i> JoeCastle</a>
+                    </div>
 
-                <div className='contact-form'>
-                    <Form onSubmit={this.handleSubmit}>
-                        <div className='form-input-wrapper'>
-                        <FormGroup>
-                            <Label for='fullName'>Full name: </Label>
-                            <Input
-                                type='text'
-                                name='fullName'
-                                id='fullName'
-                                    placeholder='Full name...'
+                    <div className='contact-form'>
+                        <Form onSubmit={this.handleSubmit}>
+                            <div className='form-input-wrapper'>
+                                <FormGroup>
+                                    <Label for='fullName'>Full name: </Label>
+                                    <Input
+                                        type='text'
+                                        name='fullName'
+                                        id='fullName'
+                                        placeholder='Full name...'
+                                        required
+                                        value={this.state.fullName}
+                                        onChange={(e) => this.setState({ fullName: e.target.value })} />
+                                </FormGroup>
+                                <FormGroup>
+                                    <Label for='email'>Email: </Label>
+                                    <Input
+                                        type='email'
+                                        name='email'
+                                        id='email'
+                                        placeholder='Email...'
+                                        required
+                                        value={this.state.email}
+                                        onChange={(e) => this.setState({ email: e.target.value })} />
+                                </FormGroup>
+                            </div>
+                            <FormGroup>
+                                <Label for='message'>Message: </Label>
+                                <Input
+                                    type='textarea'
+                                    name='message'
+                                    id='message'
+                                    placeholder='Message...'
                                     required
-                                value={this.state.fullName}
-                                onChange={(e) => this.setState({ fullName: e.target.value })} />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for='email'>Email: </Label>
-                            <Input
-                                type='email'
-                                name='email'
-                                id='email'
-                                    placeholder='Email...'
-                                    required
-                                value={this.state.email}
-                                onChange={(e) => this.setState({ email: e.target.value })} />
+                                    value={this.state.message}
+                                    onChange={(e) => this.setState({ message: e.target.value })} />
                             </FormGroup>
-                        </div>
-                        <FormGroup>
-                            <Label for='message'>Message: </Label>
-                            <Input
-                                type='textarea'
-                                name='message'
-                                id='message'
-                                placeholder='Message...'
-                                required
-                                value={this.state.message}
-                                onChange={(e) => this.setState({ message: e.target.value })} />
-                        </FormGroup>
-                        <Button disabled>Submit</Button>
-                    </Form>
-
+                            <Button disabled>Submit</Button>
+                        </Form>
+                    </div>
                 </div>
             </div>
         </div>;

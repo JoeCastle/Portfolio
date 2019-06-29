@@ -33,7 +33,7 @@ let projects: IProject[] = [
         projectName: 'shoothillWebsite',
         attributes: {
             title: 'Shoothill Website',
-            description: ['desc', 'test', 'test'],
+            description: ['descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc', 'test', 'test'],
             technologies: ['tech1', 'tech2', 'tech3'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',

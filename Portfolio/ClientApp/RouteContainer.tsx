@@ -6,7 +6,7 @@ import { NavMenu } from './components/NavMenu';
 import { RouteComponentProps } from 'react-router';
 import { Project } from './components/pages/Project';
 import projects from './data/projects';
-//import { Footer } from './components/Footer';
+import { Footer } from './components/Footer';
 
 interface Props extends RouteComponentProps<any>, React.Props<any> {
 
@@ -49,6 +49,9 @@ export class RouteContainer extends React.Component<Props> {
                     <Redirect from='*' to='/404' />
                 </Switch>
             </main>
+            <footer>
+                <Footer {...this.props} /> {/* Eventually move to RouteContainer outside of main, figure out where scrolling and backgrounds will be. */}
+            </footer>
         </div>;
     }
 }

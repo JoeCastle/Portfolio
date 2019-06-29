@@ -8,19 +8,64 @@ html {
 }
 
 html, body, #react-app, #react-app > .container-fluid, .page-parent {
-    height: 100%;
+    //height: 100%;
     padding: 0px;
     margin: 0px;
 }
 
 main {
-    margin-top: 62px;
+    margin-top: $navbar-height;
+    width: 100%;
+    min-height: 100%;
+}
+
+.page-parent {
+    //height: calc(100vh - #{$navbar-height});
+    height: auto;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
     padding: 20px;
+    //min-height: calc(100vh - #{$navbar-height}); //Interpolate
+    //height: 100%;
+}
+
+.section:after { //IE fix - https://github.com/philipwalton/flexbugs/issues/231
+    /*content: '';
+    min-height: inherit;
+    font-size: 0;
+    display: block;*/
+}
+
+.section.about {
+    min-height: calc(100vh - #{$navbar-height}); //Interpolate
+}
+
+.content-container {
     max-width: $content-max-width;
     width: 100%;
 }
 
-.page-parent {
+
+//Fix sticky footer.
+footer {
+    height: 100px;
+    margin-top: -120px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    > div {
+        max-width: $content-max-width;
+        width: 100%;
+    }
+}
+
+.section.contact-form-info-container {
+
 }

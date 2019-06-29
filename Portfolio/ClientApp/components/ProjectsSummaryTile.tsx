@@ -29,36 +29,19 @@ export class ProjectsSummaryTile extends React.Component<Props> {
         let project = projects.find(project => project.projectName === projName);
 
         return <div className='project-summary-tile'>
-            <img src="http://placekitten.com/300/200" alt="Card image cap" />
-            <div>{project!.attributes.title}</div>
+            <img src='http://placekitten.com/300/200' alt='Card image cap' />
+            <div className='project-summary-tile-content'>
+            <div className='project-summary-tile-title'>{project!.attributes.title}</div>
             {/*{project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}*/}
-            <div>{project!.attributes.description[0]}</div>
+                <div className='project-summary-tile-desc'>{project!.attributes.description[0]}</div>
+                </div>
             <Link to={project!.attributes.readMoreLink}>Read More -></Link>
-            <div className='project-tile-overlay'>
+            {/*<Link className='project-tile-overlay' to={project!.attributes.readMoreLink}>
                 <div className='overlay-text'>Hello World</div>
-            </div>
+                <div className='overlay-text'>{project!.attributes.title}</div>
+                <div className='overlay-text'>{project!.attributes.description[0]}</div>
+            </Link>*/}
             {/* https://reactstrap.github.io/components/card/ */}
-
-            {/*<Card>
-                <CardImg top width="100%" src="http://placekitten.com/300/200" alt="Card image cap" />
-                <CardBody>
-                    <CardTitle>{project!.attributes.title}</CardTitle>
-                    <CardSubtitle>Card subtitle</CardSubtitle>
-                    <CardText>{project!.attributes.description[0]}...</CardText>
-                    <Link to={project!.attributes.readMoreLink}>Read More -></Link>
-                </CardBody>
-            </Card>
-
-            <Card inverse>
-                <CardImg width="100%" src="http://placekitten.com/300/200" alt="Card image cap" />
-                <CardImgOverlay>
-                    <CardTitle>Card Title</CardTitle>
-                    <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                    <CardText>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </CardText>
-                </CardImgOverlay>
-            </Card>*/}
         </div>;
     }
 }
