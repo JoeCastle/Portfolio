@@ -7,7 +7,7 @@ interface Props extends RouteComponentProps<any>, React.Props<any> {
 
 export class NavMenu extends React.Component<Props> {
     public render() {
-        return <div className='navmain'>
+        return <nav className='navmain'>
 
             {/*<nav className='navbar navbar-inverse'>
                 <div className='nav-container'>
@@ -90,32 +90,27 @@ export class NavMenu extends React.Component<Props> {
                                 <NavLink to={'/'} exact activeClassName='active'>
                                     <span className='glyphicon glyphicon-home'></span> Home
                                 </NavLink>
+                                
+                                
+                            </li>
+                            {/* https://css-tricks.com/snippets/jquery/smooth-scrolling/ */}
+                            <li>
+                                <a href="#About"><span className='glyphicon glyphicon-home'></span> About</a>
                             </li>
                             <li>
-                                <NavLink to={'#About'} exact activeClassName='active'>
-                                    <span className='glyphicon glyphicon-home'></span> About
-                                </NavLink>
+                                <a href="#Projects"><span className='glyphicon glyphicon-home'></span> Projects</a>
                             </li>
                             <li>
-                                <NavLink to={'#Projects'} exact activeClassName='active'>
-                                    <span className='glyphicon glyphicon-home'></span> Projects
-                                </NavLink>
+                                <a href="#Skills"><span className='glyphicon glyphicon-home'></span> Skills</a>
                             </li>
                             <li>
-                                <NavLink to={'#Skills'} exact activeClassName='active'>
-                                    <span className='glyphicon glyphicon-home'></span> Skills
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to={'#Contact'} exact activeClassName='active'>
-                                    <span className='glyphicon glyphicon-home'></span> Contact
-                                </NavLink>
+                                <a href="#Contact"><span className='glyphicon glyphicon-home'></span> Contact</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-        </div>;
+        </nav>;
     }
 }

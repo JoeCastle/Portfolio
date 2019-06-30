@@ -39,7 +39,7 @@ export class ContactForm extends React.Component<Props, State> {
 
 
     public render() {
-        return <div className='contact-form-info-container section'>
+        return <div className='contact-form-info-container section' id='Contact'>
             <div className='content-container'>
                 <h2>Contact:</h2>
                 <p>Here you can send me an email if you have any questions:</p>

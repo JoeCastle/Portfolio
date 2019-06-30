@@ -64,3 +64,10 @@ interface IProjectsSummaryTileProps {
     readMoreLink: string;
     dateCompleted: string;
 }*/
+
+/*
+ * Others to include:
+    Colour attribute incase there is no available image.
+    Role/position - Junior Developer, Developer, Senior? Maybe not
+
+*/

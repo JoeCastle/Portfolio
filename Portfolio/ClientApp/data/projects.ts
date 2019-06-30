@@ -34,7 +34,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Shoothill Website',
             description: ['descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc', 'test', 'test'],
-            technologies: ['tech1', 'tech2', 'tech3'],
+            technologies: ['React', 'Redux', 'Less'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ShoothillWebsite',
@@ -46,7 +46,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Arla Bob',
             description: ['desc', 'test', 'test'],
-            technologies: ['tech1', 'tech2', 'tech3'],
+            technologies: ['React', 'Redux', 'Less'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ArlaBOB',
@@ -58,7 +58,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Portfolio',
             description: ['desc', 'test', 'test'],
-            technologies: ['tech1', 'tech2', 'tech3'],
+            technologies: ['React', 'SASS', 'tech3'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/Portfolio',
@@ -70,7 +70,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Training App',
             description: ['desc', 'test', 'test'],
-            technologies: ['tech1', 'tech2', 'tech3'],
+            technologies: ['React', 'MobX', 'SASS'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/TrainingApp',
@@ -82,7 +82,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Arduino Temperature Sensor',
             description: ['desc', 'test', 'test'],
-            technologies: ['tech1', 'tech2', 'tech3'],
+            technologies: ['C/C++', 'Arduino', 'Arduino IDE'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ArduinoTemperatureSensor',
@@ -94,11 +94,23 @@ let projects: IProject[] = [
         attributes: {
             title: 'Startpage',
             description: ['desc', 'test', 'test'],
-            technologies: ['tech1', 'tech2', 'tech3'],
+            technologies: ['HTML', 'CSS', 'JavaScript'], //Include skills.ts object where JS and JavaScript can be search characteristics for the same tech.
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/Startpage',
             routeURL: 'Projects/Startpage'
+        }
+    },
+    {
+        projectName: 'sunWater',
+        attributes: {
+            title: 'Sunwater',
+            description: ['desc', 'test', 'test'],
+            technologies: ['tech1', 'tech2', 'tech3'],
+            tags: ['tag1', 'tag2', 'tag3'],
+            img: '/img/car.jpg',
+            readMoreLink: '/Projects/SunWater',
+            routeURL: 'Projects/SunWater'
         }
     }
 

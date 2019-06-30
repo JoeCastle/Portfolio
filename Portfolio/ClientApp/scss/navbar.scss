@@ -74,7 +74,7 @@
     }
 }
 
-div.navmain {
+nav.navmain {
     width: 100%;
     height: auto;
     position: fixed;
@@ -100,16 +100,18 @@ div.navmain {
     .nav-container {
         display: flex;
         width: 100%;
-        max-width: $content-max-width;
+        max-width: $content-max-width + 19px; //Added 19px to account for scrollbar.
+        flex-direction: row-reverse;
+        margin-right: 19px;
 
         @media (max-width: 767px) {
             flex-direction: column;
+            margin-right: 0px;
         }
 
         .navbar-nav {
             display: flex !important;
             flex-direction: row;
-            float: right;
 
             @media(max-width: 767px) {
                 width: 100%;
@@ -127,6 +129,7 @@ div.navmain {
                 width: 200px;
                 display: flex;
                 align-items: center;
+                width: 190px;
 
                 > h1 {
                     margin: 0px;
@@ -141,8 +144,9 @@ div.navmain {
             @media (min-width: 768px) {
                 display: flex;
             }
-            //Below movile width
+            //Below mobile width
             @media (max-width: 767px) {
+                margin-left: 0px;
             }
         }
     }

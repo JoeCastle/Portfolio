@@ -7,7 +7,7 @@ interface Props extends RouteComponentProps<any>, React.Props<any> {
 
 export class SkillsSummary extends React.Component<Props> {
     public render() {
-        return <div className='section'>
+        return <div className='section' id='Skills'>
             <div className='content-container'>
                 <h2>Skills:</h2>
                 <p>Below is a list of skills I have:</p>

@@ -10,22 +10,30 @@ interface Props extends RouteComponentProps<any>, React.Props<any> {
 //Personal, University, Placement, Job
 export class ProjectsSummary extends React.Component<Props> {
     public render() {
-        return <div className='section'>
+
+        const numOfSummaryProjectsToDisplay = 8;
+
+        let summaryProjects = projects
+            .slice(0, numOfSummaryProjectsToDisplay + 1)
+            .filter(item =>
+                item.projectName != 'default')
+            .map((item, i) =>
+                <ProjectsSummaryTile
+                    key={i}
+                    projectName={item.projectName}
+                    {...this.props}
+                />
+            )
+
+        return <div className='section' id='Projects'>
             <div className='content-container'>
                 <h2>Projects:</h2>
                 <p>Below is a list of projects I have developed or collaborated on:</p>
                 <div className='project-summary-tiles'>
 
-                    {projects
-                        .filter(item =>
-                            item.projectName != 'default')
-                        .map((item, i) =>
-                            <ProjectsSummaryTile
-                                key={i}
-                                projectName={item.projectName}
-                                {...this.props}
-                            />
-                        )}
+                    
+
+                    {summaryProjects}
 
                     {/*<ProjectsSummaryTile
                     projectName='shoothillWebsite'
