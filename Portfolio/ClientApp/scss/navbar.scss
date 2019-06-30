@@ -116,6 +116,7 @@ nav.navmain {
             @media(max-width: 767px) {
                 width: 100%;
                 flex-direction: column;
+                margin-left: 7px;
             }
         }
 
@@ -140,6 +141,7 @@ nav.navmain {
 
         .navbar-collapse {
             width: 100%;
+            padding-left: 0px;
             //Above mobile width
             @media (min-width: 768px) {
                 display: flex;

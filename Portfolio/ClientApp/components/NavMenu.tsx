@@ -95,16 +95,16 @@ export class NavMenu extends React.Component<Props> {
                             </li>
                             {/* https://css-tricks.com/snippets/jquery/smooth-scrolling/ */}
                             <li>
-                                <a href="#About"><span className='glyphicon glyphicon-home'></span> About</a>
+                                <a href="#About"><i className='fas fa-info'></i> About</a>
                             </li>
                             <li>
-                                <a href="#Projects"><span className='glyphicon glyphicon-home'></span> Projects</a>
+                                <a href="#Projects"><i className='fas fa-laptop-code'></i> Projects</a>
                             </li>
                             <li>
-                                <a href="#Skills"><span className='glyphicon glyphicon-home'></span> Skills</a>
+                                <a href="#Skills"><i className='fas fa-code'></i> Skills</a>
                             </li>
                             <li>
-                                <a href="#Contact"><span className='glyphicon glyphicon-home'></span> Contact</a>
+                                <a href="#Contact"><i className='fas fa-envelope'></i> Contact</a>
                             </li>
                         </ul>
                     </div>
