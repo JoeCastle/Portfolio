@@ -150,6 +150,10 @@ nav.navmain {
             @media (max-width: 767px) {
                 margin-left: 0px;
             }
+
+            a {
+                cursor: pointer;
+            }
         }
     }
 }

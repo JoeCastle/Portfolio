@@ -46,12 +46,14 @@
     "last 3 iOS versions"
   ],
   "dependencies": {
+    "@types/react-router-hash-link": "^1.2.1",
     "@types/reactstrap": "^8.0.1",
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.1.4",
     "popper.js": "^1.15.0",
     "query-string": "^5.1.1",
     "react-app-polyfill": "^1.0.1",
+    "react-router-hash-link": "^1.2.1",
     "reactstrap": "^8.0.0"
   }
 }

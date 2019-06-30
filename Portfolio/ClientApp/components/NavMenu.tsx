@@ -1,12 +1,19 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
-import { Link, NavLink } from 'react-router-dom';
+//import { Link, NavLink } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { HashLink as Link } from 'react-router-hash-link';
+//const BrowserHistory = require('react-router/lib/BrowserHistory').default;
+
+
 
 interface Props extends RouteComponentProps<any>, React.Props<any> {
 }
 
 export class NavMenu extends React.Component<Props> {
+
     public render() {
+
         return <nav className='navmain'>
 
             {/*<nav className='navbar navbar-inverse'>
@@ -72,6 +79,7 @@ export class NavMenu extends React.Component<Props> {
                 </div>
             </nav>*/}
 
+
             <div className='navbar navbar-inverse'>
                 <div className='nav-container'>
                     <div className='navbar-header'>
@@ -89,22 +97,20 @@ export class NavMenu extends React.Component<Props> {
                             <li>
                                 <NavLink to={'/'} exact activeClassName='active'>
                                     <span className='glyphicon glyphicon-home'></span> Home
-                                </NavLink>
-                                
-                                
+                                    </NavLink>
                             </li>
                             {/* https://css-tricks.com/snippets/jquery/smooth-scrolling/ */}
                             <li>
-                                <a href="#About"><i className='fas fa-info'></i> About</a>
+                                <NavLink smooth to='/#About' exact activeClassName='active'><i className='fas fa-info'></i> About</NavLink>
                             </li>
                             <li>
-                                <a href="#Projects"><i className='fas fa-laptop-code'></i> Projects</a>
+                                <NavLink smooth to='/#Projects' exact activeClassName='active'><i className='fas fa-laptop-code'></i> Projects</NavLink>
                             </li>
                             <li>
-                                <a href="#Skills"><i className='fas fa-code'></i> Skills</a>
+                                <NavLink smooth to='/#Skills' exact activeClassName='active'><i className='fas fa-code'></i> Skills</NavLink>
                             </li>
                             <li>
-                                <a href="#Contact"><i className='fas fa-envelope'></i> Contact</a>
+                                <NavLink smooth to='/#Contact' exact activeClassName='active'><i className='fas fa-envelope'></i> Contact</NavLink>
                             </li>
                         </ul>
                     </div>
@@ -113,4 +119,19 @@ export class NavMenu extends React.Component<Props> {
 
         </nav>;
     }
+
+    /*private goBack = (): boolean => {
+        //debugger;
+
+        //e.preventDefault();
+
+        //this.props.history.goBack;
+
+
+        console.log("test");
+        console.log(this.props.history.length);
+
+        return false;
+    }*/
+
 }

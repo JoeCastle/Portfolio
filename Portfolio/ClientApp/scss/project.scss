@@ -65,7 +65,7 @@
         //https://stackoverflow.com/a/53156390/5547950
         $font-size: 14px;
         $line-height: 1.4;
-        $lines-to-show: 3;
+        $lines-to-show: 2;
 
         .project-summary-tile-desc {
             display: block; /* Fallback for non-webkit */
@@ -79,6 +79,7 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+            margin-top: 10px;
         }
     }
 }
