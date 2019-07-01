@@ -33,6 +33,8 @@
     <None Remove="ClientApp\components\SkillsSummaryTile.tsx" />
     <None Remove="ClientApp\data\projects.ts" />
     <None Remove="ClientApp\data\skills.ts" />
+    <None Remove="ClientApp\images\imageImports.ts" />
+    <None Remove="ClientApp\typings\imagePng.d.ts" />
     <None Remove="ClientApp\utils\utils.ts" />
   </ItemGroup>
 
@@ -48,7 +50,9 @@
     <TypeScriptCompile Include="ClientApp\components\SkillsSummaryTile.tsx" />
     <TypeScriptCompile Include="ClientApp\data\projects.ts" />
     <TypeScriptCompile Include="ClientApp\data\skills.ts" />
+    <TypeScriptCompile Include="ClientApp\images\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\RouteContainer.tsx" />
+    <TypeScriptCompile Include="ClientApp\typings\imagePng.d.ts" />
     <TypeScriptCompile Include="ClientApp\utils\utils.ts" />
   </ItemGroup>
 

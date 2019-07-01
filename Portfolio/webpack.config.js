@@ -13,7 +13,7 @@ module.exports = (env) => {
         output: {
             path: path.join(__dirname, bundleOutputDir),
             filename: '[name].js',
-            publicPath: 'dist/'
+            publicPath: '/dist/'
         },
         module: {
             rules: [
@@ -23,6 +23,17 @@ module.exports = (env) => {
                 { test: /\.(s*)css$/, use: [{ loader: 'style-loader' }, { loader: 'css-loader'}, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }] },
                 //{ test: /\.(s*)css$/, use: ['style-loader', 'css-loader', 'sass-loader'] }, //https://medium.com/a-beginners-guide-for-webpack-2/using-sass-9f52e447c5ae
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
+                /*{
+                    test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: '[path][name]-[hash:8].[ext]'
+                            },
+                        },
+                    ]
+                },*/
             ]
         },
         plugins: [
