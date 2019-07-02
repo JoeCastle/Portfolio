@@ -7,6 +7,7 @@ import { RouteComponentProps } from 'react-router';
 import { Project } from './components/pages/Project';
 import projects from './data/projects';
 import { Footer } from './components/Footer';
+import { HashLink as Link } from 'react-router-hash-link';
 
 interface Props extends RouteComponentProps<any>, React.Props<any> {
 
@@ -14,14 +15,32 @@ interface Props extends RouteComponentProps<any>, React.Props<any> {
 
 export class RouteContainer extends React.Component<Props> {
 
+    //Scroll to the top of the page.
+    handleScrollToTop = () => {
+        let element = document.getElementById('page-parent');
+
+        element!.scrollTop = 0;
+    }
+
+    //Only show the scroll to top button when scrolled.
+    handleScrollToTopButtonVisibility = (e: any) => {
+        let element = document.getElementById('scroll-to-top-btn');
+        
+        if (e.target.scrollTop >= 100) {
+            element!.classList.add('show');
+        } else {
+            element!.classList.remove('show');
+        }
+    }
+
     public render() {
         const { match } = this.props;
 
-        return <div className='page-parent'>
+        return <div id='page-parent' onScroll={this.handleScrollToTopButtonVisibility}>
             
             <NavMenu {...this.props} />
             
-            <main>
+            <main id='Home'>
                 <Switch>
                     <Route exact path={`${match.url}`} render={(props: any) => <Home {...props} />} />
 
@@ -52,6 +71,15 @@ export class RouteContainer extends React.Component<Props> {
             <footer>
                 <Footer {...this.props} /> {/* Eventually move to RouteContainer outside of main, figure out where scrolling and backgrounds will be. */}
             </footer>
+
+            {/*<button
+                id='scroll-to-top-btn'
+                onClick={this.handleScrollToTop}
+                title='Scroll to top'>
+                <i className='fas fa-arrow-up'></i>
+            </button>*/}
+            <div id='scroll-to-top-btn'><Link smooth to='/#Home' title='Scroll to top'><i className='fas fa-arrow-up'></i></Link></div>
+            
         </div>;
     }
 }

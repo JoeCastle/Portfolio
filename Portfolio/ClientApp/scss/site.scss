@@ -13,7 +13,7 @@ html {
     font-size: 100%;
 }
 
-html, body, #react-app, #react-app > .container-fluid, .page-parent {
+html, body, #react-app, #react-app > .container-fluid, #page-parent {
     height: 100%;
     padding: 0px;
     margin: 0px;
@@ -31,10 +31,25 @@ main {
     margin-top: 0px;
 }
 
-.page-parent {
+#page-parent {
     height: calc(100vh - #{$navbar-height});
     overflow: auto;
     margin-top: 62px;
+
+    #scroll-to-top-btn {
+        position: absolute;
+        bottom: 36px;
+        right: 50px;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    #scroll-to-top-btn.show {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
 }
 
 .section {
