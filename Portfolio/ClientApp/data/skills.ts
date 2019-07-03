@@ -15,6 +15,7 @@ interface ISkill {
     //[x: string]: any;
     skillName: string;
     img: string;
+    imgSource?: string;
     altTag: string;
     type: skillType;
 }
@@ -58,49 +59,52 @@ let skills: ISkill[] = [
     },
     {
         skillName: 'aspnetcore',
-        img: '',
+        img: images.aspnetcoreLogo,
+        imgSource: 'https://github.com/campusMVP/dotnetCoreLogoPack',
         altTag: 'aspnetcore logo',
         type: skillType.other
     },
     {
         skillName: 'csharp',
-        img: '',
+        img: images.csharpLogo,
         altTag: 'c# logo',
         type: skillType.language
     },
     {
         skillName: 'visualstudio',
-        img: '',
+        img: images.visualstudio2017Logo,
+        imgSource: 'https://logos.fandom.com/wiki/Microsoft_Visual_Studio',
         altTag: 'visual studio logo',
         type: skillType.software
     },
     {
         skillName: 'visualstudiocode',
-        img: '',
+        img: images.visualstudiocodeLogo,
         altTag: 'visual studio code logo',
         type: skillType.software
     },
     {
         skillName: 'java',
-        img: '',
+        img: images.javaLogo,
         altTag: 'java logo',
         type: skillType.language
     },
     {
         skillName: 'eclipse',
-        img: '',
+        img: images.eclipseLogo,
         altTag: 'eclipse logo',
         type: skillType.software
     },
     {
         skillName: 'sql',
-        img: '',
+        img: images.DatabaseLogo,
+        imgSource: 'https://www.kisspng.com/png-oracle-database-computer-icons-logo-encapsulated-p-852860/download-png.html',
         altTag: 'sql logo',
         type: skillType.language
     },
     {
         skillName: 'mssqlserver',
-        img: '',
+        img: images.MssqlserverLogo,
         altTag: 'mssqlserver logo',
         type: skillType.software
     }
