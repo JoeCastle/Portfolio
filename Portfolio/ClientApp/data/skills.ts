@@ -46,13 +46,13 @@ let skills: ISkill[] = [
     },
     {
         skillName: 'javascript',
-        img: '',
+        img: images.javascriptLogo,
         altTag: 'javascript logo',
         type: skillType.language
     },
     {
         skillName: 'typescript',
-        img: '',
+        img: images.typescriptLogo,
         altTag: 'typescript logo',
         type: skillType.language
     },

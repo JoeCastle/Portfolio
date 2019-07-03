@@ -14,8 +14,18 @@ interface Props extends RouteComponentProps<any>, React.Props<any>, IProjectProp
 
 export class Project extends React.Component<Props> {
 
+    componentDidMount() {
+        this.handleScrollReset();
+    }
+
+    handleScrollReset = () => {
+        let element = document.getElementById('page-parent');
+        element!.scrollTop = 0;
+    }
+
     public render() {
 
+        //Move to state.
         let projName = '';
 
         projName = utils.verifyProjName(this.props.projectName);

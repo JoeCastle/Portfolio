@@ -9,6 +9,7 @@ export class Footer extends React.Component<Props> {
         return <div>
             <h2>Footer</h2>
             <p>This is the footer</p>
+            <p>Copyright &copy; 2019 Joseph Castle. All Rights Reserved.</p>
         </div>;
     }
 }

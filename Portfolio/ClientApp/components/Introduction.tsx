@@ -13,6 +13,7 @@ export class Introduction extends React.Component<Props> {
                 <p>Hey, my name is Joe and I've recently achieved a 1st class degree in BSc (Hons) Computer Science (Software Engineering) with Placement at the University of Wolverhampton. My aim is to become a Software Developer.</p>
                 <p>I currently live in Wolverhampton, UK and I am looking for a job as a Software Developer.</p>
                 <p>I mostly have front-end experience, however I'm looking to improved my back-end development skills.</p>
+                <p>Currently looking for a position as a graduate developer.</p>
             </div>
         </div>;
     }
