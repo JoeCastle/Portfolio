@@ -11,6 +11,16 @@ import 'core-js/features/number/is-nan';*/
 
 //import 'core-js/es6/symbol';
 
+//SSR
+//https://medium.com/@apakmahmud/server-side-rendering-react-with-net-core-1f3eaf8962fb
+//https://github.com/Apak00/react-dotnet-ssr
+//https://alanocoder.com/react-with-server-side-rendering-get-started-with-asp-net-core/
+//https://github.com/NickMaev/react-core-boilerplate
+//https://github.com/antonybudianto/cra-universal
+//https://www.robertcooper.me/react-server-side-rendering
+//https://mac-blog.org.ua/ssr-dotnet-core/
+//React todo - SSR and authentication
+
 import './scss/site.scss';
 import 'bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css';

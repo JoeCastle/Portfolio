@@ -10,6 +10,9 @@ import { Footer } from './components/Footer';
 //import * as ReactDOM from 'react-dom';
 //import { HashLink as Link } from 'react-router-hash-link';
 
+//Query strings
+//https://tylermcginnis.com/react-router-query-strings/
+
 interface Props extends RouteComponentProps<any>, React.Props<any> {
 
 }
@@ -37,14 +40,6 @@ export class RouteContainer extends React.Component<Props> {
             element!.classList.remove('show');
         }
     }
-
-    /*componentWillReceiveProps() {
-        const element = ReactDOM.findDOMNode(this);
-        if (element != null) {
-            //this.scrollPosition = window.scrollY;
-            window.scrollTo(0, 0);
-        }
-    }*/
 
     public render() {
         const { match } = this.props;
