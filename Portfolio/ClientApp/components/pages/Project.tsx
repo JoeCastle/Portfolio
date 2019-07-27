@@ -59,8 +59,8 @@ export class Project extends React.Component<Props> {
                 <div className='proj-content-wrapper'>
                     <div className='project-image'>{project!.attributes.img || 'test'}</div>
                     <div>
-                        <ul>Techs: {project!.attributes.technologies.map((item, i) => <li key={i}>{item}</li>)}</ul>
-                        <ul>Tags: {project!.attributes.tags.map((item, i) => <li key={i}>{item}</li>)}</ul>
+                        <ul>Techs: {project!.attributes.technologies.map((item, i) => <li key={i}> {item}</li>)}</ul>
+                        <ul>Tags: {project!.attributes.tags.map((item, i) => <li key={i}> {item}</li>)}</ul>
                     </div>
                 </div>
                 <div className='project-desc'>{project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}</div>
