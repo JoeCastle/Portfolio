@@ -8,6 +8,8 @@ interface IAttributes {
     img: string;
     readMoreLink: string;
     routeURL: string;
+    sourceCode: string;
+    liveDemo: string;
 }
 
 interface IProject {
@@ -26,7 +28,9 @@ let projects: IProject[] = [
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/404',
-            routeURL: '404'
+            routeURL: '404',
+            sourceCode: '',
+            liveDemo: ''
         }
     },
     {
@@ -38,7 +42,9 @@ let projects: IProject[] = [
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ShoothillWebsite',
-            routeURL: 'Projects/ShoothillWebsite'
+            routeURL: 'Projects/ShoothillWebsite',
+            sourceCode: '',
+            liveDemo: 'https://www.shoothill.com'
         },
     },
     {
@@ -50,7 +56,9 @@ let projects: IProject[] = [
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ArlaBOB',
-            routeURL: 'Projects/ArlaBOB'
+            routeURL: 'Projects/ArlaBOB',
+            sourceCode: '',
+            liveDemo: 'http://whoseroundisitanyway.co.uk'
         }
     },
     {
@@ -62,7 +70,9 @@ let projects: IProject[] = [
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/Portfolio',
-            routeURL: 'Projects/Portfolio'
+            routeURL: 'Projects/Portfolio',
+            sourceCode: 'https://github.com/JoeCastle/Portfolio',
+            liveDemo: ''
         }
     },
     {
@@ -74,7 +84,9 @@ let projects: IProject[] = [
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/TrainingApp',
-            routeURL: 'Projects/TrainingApp'
+            routeURL: 'Projects/TrainingApp',
+            sourceCode: 'https://github.com/JoeCastle/WebAppProj',
+            liveDemo: ''
         }
     },
     {
@@ -86,7 +98,9 @@ let projects: IProject[] = [
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ArduinoTemperatureSensor',
-            routeURL: 'Projects/ArduinoTemperatureSensor'
+            routeURL: 'Projects/ArduinoTemperatureSensor',
+            sourceCode: '',
+            liveDemo: ''
         }
     },
     {
@@ -98,7 +112,9 @@ let projects: IProject[] = [
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/Startpage',
-            routeURL: 'Projects/Startpage'
+            routeURL: 'Projects/Startpage',
+            sourceCode: 'https://github.com/RTCRhino/StartPage',
+            liveDemo: ''
         }
     },
     {
@@ -110,7 +126,23 @@ let projects: IProject[] = [
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/SunWater',
-            routeURL: 'Projects/SunWater'
+            routeURL: 'Projects/SunWater',
+            sourceCode: '',
+            liveDemo: ''
+        }
+    },
+    {
+        projectName: 'fizzBuzzEurofins',
+        attributes: {
+            title: 'FizzBuzzTask',
+            description: ['desc', 'test', 'test'],
+            technologies: ['tech1', 'tech2', 'tech3'],
+            tags: ['tag1', 'tag2', 'tag3'],
+            img: '/img/car.jpg',
+            readMoreLink: '/Projects/FizzBuzzTask',
+            routeURL: 'Projects/FizzBuzzTask',
+            sourceCode: 'https://github.com/JoeCastle/FizzBuzzTask',
+            liveDemo: ''
         }
     }
 

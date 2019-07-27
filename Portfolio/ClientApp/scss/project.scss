@@ -89,6 +89,47 @@
     box-shadow: 6px 6px 10px -4px rgba(0,0,0,0.45);
 }
 
+.project-summary {
+    display: flex;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .proj-content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-links {
+            flex-direction: row;
+        }
+
+        .project-image {
+            max-width: 200px;
+            max-height: 200px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .project-desc {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
 
 
 /*
