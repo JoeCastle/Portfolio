@@ -108,6 +108,12 @@
 
         .project-links {
             flex-direction: row;
+
+
+
+            > a:first-of-type {
+                margin-right: 10px;
+            }
         }
 
         .project-image {
@@ -128,6 +134,22 @@
     .project-desc {
         margin-top: 15px;
         margin-bottom: 15px;
+    }
+
+    .project-subtitle {
+        font-weight: bold;
+        margin-right: 5px;
+        margin-bottom: 0px;
+    }
+
+    .project-title-section {
+        height: 100%;
+        max-height: 150px;
+
+        h1 {
+            margin: 0px;
+            margin-right: 5px;
+        }
     }
 }
 

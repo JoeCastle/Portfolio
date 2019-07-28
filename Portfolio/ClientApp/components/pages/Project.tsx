@@ -37,9 +37,11 @@ export class Project extends React.Component<Props> {
 
         return <div className='project-summary'>
             <div className='content-container'>
-                <div className='proj-content-wrapper'>
+                <div className='proj-content-wrapper project-title-section'>
                     <h1 className='project-title'>{project!.attributes.title}</h1>
                     <div className='project-links'>
+
+                        <p className='project-subtitle'>Links:</p>
 
                         {
                             hasSource ? 
@@ -59,8 +61,8 @@ export class Project extends React.Component<Props> {
                 <div className='proj-content-wrapper'>
                     <div className='project-image'>{project!.attributes.img || 'test'}</div>
                     <div>
-                        <ul>Techs: {project!.attributes.technologies.map((item, i) => <li key={i}> {item}</li>)}</ul>
-                        <ul>Tags: {project!.attributes.tags.map((item, i) => <li key={i}> {item}</li>)}</ul>
+                        <ul><span className='project-subtitle'>Techs:</span> {project!.attributes.technologies.map((item, i) => (<li key={i}> {(i ? ', ' : '') + item}</li>))}</ul>
+                        <ul><span className='project-subtitle'>Tags:</span> {project!.attributes.tags.map((item, i) => (<li key={i}> {(i ? ', ' : '') + item}</li>))}</ul>
                     </div>
                 </div>
                 <div className='project-desc'>{project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}</div>
