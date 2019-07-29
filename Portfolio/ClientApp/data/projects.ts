@@ -10,6 +10,8 @@ interface IAttributes {
     routeURL: string;
     sourceCode: string;
     liveDemo: string;
+    projectType: string; //University, Personal, Work, Freelance
+    yearCompleted?: string; //2018, 2017* - Initially completed in 2017 at uni, but built my own web page once I left.
 }
 
 interface IProject {
@@ -30,7 +32,8 @@ let projects: IProject[] = [
             readMoreLink: '/404',
             routeURL: '404',
             sourceCode: '',
-            liveDemo: ''
+            liveDemo: '',
+            projectType: ''
         }
     },
     {
@@ -44,7 +47,8 @@ let projects: IProject[] = [
             readMoreLink: '/Projects/ShoothillWebsite',
             routeURL: 'Projects/ShoothillWebsite',
             sourceCode: '',
-            liveDemo: 'https://www.shoothill.com'
+            liveDemo: 'https://www.shoothill.com',
+            projectType: ''
         },
     },
     {
@@ -58,7 +62,8 @@ let projects: IProject[] = [
             readMoreLink: '/Projects/ArlaBOB',
             routeURL: 'Projects/ArlaBOB',
             sourceCode: '',
-            liveDemo: 'http://whoseroundisitanyway.co.uk'
+            liveDemo: 'http://whoseroundisitanyway.co.uk',
+            projectType: ''
         }
     },
     {
@@ -72,7 +77,8 @@ let projects: IProject[] = [
             readMoreLink: '/Projects/Portfolio',
             routeURL: 'Projects/Portfolio',
             sourceCode: 'https://github.com/JoeCastle/Portfolio',
-            liveDemo: ''
+            liveDemo: '',
+            projectType: ''
         }
     },
     {
@@ -86,7 +92,8 @@ let projects: IProject[] = [
             readMoreLink: '/Projects/TrainingApp',
             routeURL: 'Projects/TrainingApp',
             sourceCode: 'https://github.com/JoeCastle/WebAppProj',
-            liveDemo: ''
+            liveDemo: '',
+            projectType: ''
         }
     },
     {
@@ -100,7 +107,8 @@ let projects: IProject[] = [
             readMoreLink: '/Projects/ArduinoTemperatureSensor',
             routeURL: 'Projects/ArduinoTemperatureSensor',
             sourceCode: '',
-            liveDemo: ''
+            liveDemo: '',
+            projectType: ''
         }
     },
     {
@@ -114,7 +122,8 @@ let projects: IProject[] = [
             readMoreLink: '/Projects/Startpage',
             routeURL: 'Projects/Startpage',
             sourceCode: 'https://github.com/RTCRhino/StartPage',
-            liveDemo: ''
+            liveDemo: '',
+            projectType: ''
         }
     },
     {
@@ -128,7 +137,8 @@ let projects: IProject[] = [
             readMoreLink: '/Projects/SunWater',
             routeURL: 'Projects/SunWater',
             sourceCode: '',
-            liveDemo: ''
+            liveDemo: '',
+            projectType: ''
         }
     },
     {
@@ -142,7 +152,8 @@ let projects: IProject[] = [
             readMoreLink: '/Projects/FizzBuzzTask',
             routeURL: 'Projects/FizzBuzzTask',
             sourceCode: 'https://github.com/JoeCastle/FizzBuzzTask',
-            liveDemo: ''
+            liveDemo: '',
+            projectType: ''
         }
     }
 
