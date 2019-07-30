@@ -1,16 +1,25 @@
 ﻿//https://www.codereadability.com/replacing-if-statements-with-object-lookups/
 
+enum projType {
+    personal = "Personal",
+    university = "University",
+    work = "Work",
+    freelance = "Freelance",
+    contract = "Contract"
+}
+
 interface IAttributes {
     title: string;
     description: string[]; //Allows for multiple paragraphs to be included. Can map different index to a new element.
     technologies: string[];
     tags: string[];
     img: string;
+    carouselImages?: string[];
     readMoreLink: string;
     routeURL: string;
     sourceCode: string;
     liveDemo: string;
-    projectType: string; //University, Personal, Work, Freelance
+    projectType: projType; //University, Personal, Work, Freelance
     yearCompleted?: string; //2018, 2017* - Initially completed in 2017 at uni, but built my own web page once I left.
 }
 
@@ -33,7 +42,7 @@ let projects: IProject[] = [
             routeURL: '404',
             sourceCode: '',
             liveDemo: '',
-            projectType: ''
+            projectType: projType.personal
         }
     },
     {
@@ -41,14 +50,14 @@ let projects: IProject[] = [
         attributes: {
             title: 'Shoothill Website',
             description: ['descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc', 'test', 'test'],
-            technologies: ['React', 'Redux', 'Less'],
+            technologies: ['React', 'Redux', 'Less', 'ASP.NET Core'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ShoothillWebsite',
             routeURL: 'Projects/ShoothillWebsite',
             sourceCode: '',
             liveDemo: 'https://www.shoothill.com',
-            projectType: ''
+            projectType: projType.work
         },
     },
     {
@@ -56,14 +65,14 @@ let projects: IProject[] = [
         attributes: {
             title: 'Arla Bob',
             description: ['desc', 'test', 'test'],
-            technologies: ['React', 'Redux', 'Less'],
+            technologies: ['React', 'Redux', 'Less', 'ASP.NET Core'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ArlaBOB',
             routeURL: 'Projects/ArlaBOB',
             sourceCode: '',
             liveDemo: 'http://whoseroundisitanyway.co.uk',
-            projectType: ''
+            projectType: projType.work
         }
     },
     {
@@ -71,14 +80,14 @@ let projects: IProject[] = [
         attributes: {
             title: 'Portfolio',
             description: ['desc', 'test', 'test'],
-            technologies: ['React', 'SASS', 'tech3'],
+            technologies: ['React', 'SASS', 'ASP.NET Core'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/Portfolio',
             routeURL: 'Projects/Portfolio',
             sourceCode: 'https://github.com/JoeCastle/Portfolio',
             liveDemo: '',
-            projectType: ''
+            projectType: projType.personal
         }
     },
     {
@@ -93,7 +102,7 @@ let projects: IProject[] = [
             routeURL: 'Projects/TrainingApp',
             sourceCode: 'https://github.com/JoeCastle/WebAppProj',
             liveDemo: '',
-            projectType: ''
+            projectType: projType.university
         }
     },
     {
@@ -108,7 +117,7 @@ let projects: IProject[] = [
             routeURL: 'Projects/ArduinoTemperatureSensor',
             sourceCode: '',
             liveDemo: '',
-            projectType: ''
+            projectType: projType.university
         }
     },
     {
@@ -123,7 +132,7 @@ let projects: IProject[] = [
             routeURL: 'Projects/Startpage',
             sourceCode: 'https://github.com/RTCRhino/StartPage',
             liveDemo: '',
-            projectType: ''
+            projectType: projType.personal
         }
     },
     {
@@ -138,7 +147,7 @@ let projects: IProject[] = [
             routeURL: 'Projects/SunWater',
             sourceCode: '',
             liveDemo: '',
-            projectType: ''
+            projectType: projType.work
         }
     },
     {
@@ -153,7 +162,7 @@ let projects: IProject[] = [
             routeURL: 'Projects/FizzBuzzTask',
             sourceCode: 'https://github.com/JoeCastle/FizzBuzzTask',
             liveDemo: '',
-            projectType: ''
+            projectType: projType.personal
         }
     }
 

@@ -2,7 +2,7 @@
 import cssLogo from '../images/CSS3_logo.png';
 import sassLogo from '../images/SASS_logo.png';*/
 
-import images from '../images/imageImports'
+import images from '../images/skills/imageImports'
 
 enum skillType {
     language = 0,

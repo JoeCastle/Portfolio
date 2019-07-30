@@ -50,7 +50,7 @@
     <TypeScriptCompile Include="ClientApp\components\SkillsSummaryTile.tsx" />
     <TypeScriptCompile Include="ClientApp\data\projects.ts" />
     <TypeScriptCompile Include="ClientApp\data\skills.ts" />
-    <TypeScriptCompile Include="ClientApp\images\imageImports.ts" />
+    <TypeScriptCompile Include="ClientApp\images\skills\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\RouteContainer.tsx" />
     <TypeScriptCompile Include="ClientApp\typings\imageDeclarations.d.ts" />
     <TypeScriptCompile Include="ClientApp\utils\utils.ts" />
