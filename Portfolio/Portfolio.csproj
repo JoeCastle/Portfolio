@@ -56,6 +56,11 @@
     <TypeScriptCompile Include="ClientApp\utils\utils.ts" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ClientApp\images\projects\shoothillwebsite\" />
+    <Folder Include="ClientApp\images\projects\startpage\" />
+  </ItemGroup>
+
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

@@ -10,7 +10,8 @@ enum projType {
 
 interface IAttributes {
     title: string;
-    description: string[]; //Allows for multiple paragraphs to be included. Can map different index to a new element.
+    description: string[]; //Array allows for multiple paragraphs to be included. Can map different index to a new element.
+    summary?: string; //A short description, probably used on the home page.
     technologies: string[];
     tags: string[];
     img: string;
@@ -50,7 +51,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Shoothill Website',
             description: ['descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc', 'test', 'test'],
-            technologies: ['React', 'Redux', 'Less', 'ASP.NET Core'],
+            technologies: ['React', 'Redux', 'LESS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ShoothillWebsite',
@@ -65,7 +66,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Arla Bob',
             description: ['desc', 'test', 'test'],
-            technologies: ['React', 'Redux', 'Less', 'ASP.NET Core'],
+            technologies: ['React', 'Redux', 'LESS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/ArlaBOB',
@@ -80,7 +81,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Portfolio',
             description: ['desc', 'test', 'test'],
-            technologies: ['React', 'SASS', 'ASP.NET Core'],
+            technologies: ['React', 'SASS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/Portfolio',
@@ -95,7 +96,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Training App',
             description: ['desc', 'test', 'test'],
-            technologies: ['React', 'MobX', 'SASS'],
+            technologies: ['React', 'MobX', 'SASS', 'ASP.NET Core', 'Visual Studio', 'SQL', 'SQL Server Management Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/TrainingApp',
@@ -125,7 +126,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Startpage',
             description: ['desc', 'test', 'test'],
-            technologies: ['HTML', 'CSS', 'JavaScript'], //Include skills.ts object where JS and JavaScript can be search characteristics for the same tech.
+            technologies: ['HTML', 'CSS', 'JavaScript', 'VS Code'], //Include skills.ts object where JS and JavaScript can be search characteristics for the same tech.
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/Startpage',
@@ -140,7 +141,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'Sunwater',
             description: ['desc', 'test', 'test'],
-            technologies: ['tech1', 'tech2', 'tech3'],
+            technologies: ['React', 'MobX', 'SASS', 'Visual Studio', 'Azure Blob Storage'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/SunWater',
@@ -155,7 +156,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'FizzBuzzTask',
             description: ['desc', 'test', 'test'],
-            technologies: ['tech1', 'tech2', 'tech3'],
+            technologies: ['HTML', 'CSS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/FizzBuzzTask',
