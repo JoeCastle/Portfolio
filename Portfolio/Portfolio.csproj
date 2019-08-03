@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\boot-server.tsx" />
     <None Remove="ClientApp\components\ContactForm.tsx" />
     <None Remove="ClientApp\components\Footer.tsx" />
     <None Remove="ClientApp\components\FourZeroFour.tsx" />
@@ -39,6 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\boot-server.tsx" />
     <TypeScriptCompile Include="ClientApp\components\ContactForm.tsx" />
     <TypeScriptCompile Include="ClientApp\components\Footer.tsx" />
     <TypeScriptCompile Include="ClientApp\components\pages\FourZeroFour.tsx" />
@@ -59,6 +61,7 @@
   <ItemGroup>
     <Folder Include="ClientApp\images\projects\shoothillwebsite\" />
     <Folder Include="ClientApp\images\projects\startpage\" />
+    <Folder Include="wwwroot\dist\" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
