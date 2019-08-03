@@ -59,31 +59,16 @@ module.exports = (env) => {
         module: {
             rules: [
                 { test: /\.tsx?$/, include: /ClientApp/, use: 'awesome-typescript-loader?silent=true' },
-                //{ test: /\.(s*)css$/, use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }] },
-                //{
-                //    test: /\.(s*)css$/,
-                //    use: extractSiteSass.extract({
-                //        use: [{ loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }]
-                //    })
-                //},
                 {
-                    test: /\.(sa|sc|c)ss$/,
-                    use: [
-                        {
-                            loader: MiniCssExtractPlugin.loader,
-                            options: {
-                                hmr: process.env.NODE_ENV === 'development',
-                            },
-                        },
-                        { loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }
-                    ],
+                    test: /\.css$/,
+                    loader: "style-loader!css-loader"
                 },
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=100000' }
             ]
         },
         plugins: [
             //extractSiteSass,
-            //new CheckerPlugin() // `CheckerPlugin` is optional. Use it if you want async error reporting.
+            new CheckerPlugin(), // `CheckerPlugin` is optional. Use it if you want async error reporting.
             new MiniCssExtractPlugin({
                 // Options similar to the same options in webpackOptions.output
                 // both options are optional
@@ -96,10 +81,29 @@ module.exports = (env) => {
     const clientConfig = merge(sharedConfig, {
         //client properties
         entry: { 'main': './ClientApp/boot.tsx' },
+        module: {
+            rules: [
+                //{ test: /\.css$/, use: isDevBuild ? ['style-loader', 'css-loader'] : [MiniCssExtractPlugin.loader, 'css-loader'] },
+                
+                {
+                    test: /\.scss$/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                hmr: process.env.NODE_ENV === 'development',
+                            },
+                        },
+                        { loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }
+                    ],
+                },
+            ]
+        },
         output: {
             path: path.join(__dirname, bundleOutputDir),
             filename: '[name].js',
-            publicPath: '/dist/'
+            publicPath: '/dist/',
+            globalObject: 'this'
         },
         plugins: [
             new CheckerPlugin(),
@@ -126,9 +130,11 @@ module.exports = (env) => {
         entry: { "main-server": "./ClientApp/boot-server.tsx" },
         output: {
             libraryTarget: "commonjs",
-            path: path.join(__dirname, "./wwwroot/dist")
+            path: path.join(__dirname, "./wwwroot/dist"),
+            globalObject: 'this'
         },
-        target: "node"
+        target: "node",
+        externals: ["react-helmet"]
     });
 
     return [clientConfig, serverConfig];

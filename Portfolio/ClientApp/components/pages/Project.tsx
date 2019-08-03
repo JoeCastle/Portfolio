@@ -2,6 +2,7 @@
 import { RouteComponentProps } from 'react-router';
 import projects from '../../data/projects';
 import utils from '../../utils/utils';
+import { Helmet } from "react-helmet";
 
 //Clicking on the summary tile will navigate to a seperate page.
 //Should be able to navigate to the page directly using URL.
@@ -36,6 +37,10 @@ export class Project extends React.Component<Props> {
         let hasSource = project!.attributes.sourceCode == '' ? false : true;
 
         return <div className='project-summary'>
+            <Helmet>
+                <title>Project - Joseph Castle</title>
+                <meta name="description" content="Project page" />
+            </Helmet>
             <div className='content-container'>
                 <div className='proj-content-wrapper project-title-section'>
                     <h1 className='project-title'>{project!.attributes.title}</h1>
