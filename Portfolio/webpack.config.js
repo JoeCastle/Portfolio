@@ -1,9 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const bundleOutputDir = './wwwroot/dist';
 const merge = require("webpack-merge");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 //module.exports = (env) => {
 //    const isDevBuild = !(env && env.prod);
@@ -46,7 +47,7 @@ const merge = require("webpack-merge");
 
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
-    const extractSiteSass = new ExtractTextPlugin('main.css');
+    //const extractSiteSass = new ExtractTextPlugin('main.css');
 
     let sharedConfig = {
         stats: { modules: false },
@@ -59,18 +60,36 @@ module.exports = (env) => {
             rules: [
                 { test: /\.tsx?$/, include: /ClientApp/, use: 'awesome-typescript-loader?silent=true' },
                 //{ test: /\.(s*)css$/, use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }] },
+                //{
+                //    test: /\.(s*)css$/,
+                //    use: extractSiteSass.extract({
+                //        use: [{ loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }]
+                //    })
+                //},
                 {
-                    test: /\.(s*)css$/,
-                    use: extractSiteSass.extract({
-                        use: [{ loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }]
-                    })
+                    test: /\.(sa|sc|c)ss$/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                hmr: process.env.NODE_ENV === 'development',
+                            },
+                        },
+                        { loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }
+                    ],
                 },
-                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
+                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=100000' }
             ]
         },
         plugins: [
-            extractSiteSass,
+            //extractSiteSass,
             //new CheckerPlugin() // `CheckerPlugin` is optional. Use it if you want async error reporting.
+            new MiniCssExtractPlugin({
+                // Options similar to the same options in webpackOptions.output
+                // both options are optional
+                filename: isDevBuild ? '[name].css' : '[name].[hash].css',
+                chunkFilename: isDevBuild ? '[id].css' : '[id].[hash].css',
+            }),
         ]
     };
 
