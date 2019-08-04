@@ -22,7 +22,7 @@ import 'core-js/features/number/is-nan';*/
 //React todo - SSR and authentication
 
 import './scss/site.scss';
-import 'bootstrap';
+//import 'bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
