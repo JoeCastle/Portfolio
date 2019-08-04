@@ -4,7 +4,7 @@
 //Add mobx stores
 //
 
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 import { Introduction } from '../Introduction';
