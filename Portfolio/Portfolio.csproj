@@ -59,8 +59,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\images\projects\shoothillwebsite\" />
-    <Folder Include="ClientApp\images\projects\startpage\" />
+    <Folder Include="ClientApp\images\projects\arlaBob\" />
+    <Folder Include="ClientApp\images\projects\arduinoTemperatureSensor\" />
+    <Folder Include="ClientApp\images\projects\fizzBuzzEurofins\" />
+    <Folder Include="ClientApp\images\projects\trainingApp\" />
+    <Folder Include="ClientApp\images\projects\portfolio\" />
+    <Folder Include="ClientApp\images\projects\shoothillWebsite\" />
+    <Folder Include="ClientApp\images\projects\startPage\" />
     <Folder Include="wwwroot\dist\" />
   </ItemGroup>
 

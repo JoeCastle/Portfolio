@@ -64,7 +64,7 @@ let projects: IProject[] = [
     {
         projectName: 'arlaBob',
         attributes: {
-            title: 'Arla Bob',
+            title: 'Arla B.O.B',
             description: ['desc', 'test', 'test'],
             technologies: ['React', 'Redux', 'LESS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
@@ -156,7 +156,7 @@ let projects: IProject[] = [
         attributes: {
             title: 'FizzBuzzTask',
             description: ['desc', 'test', 'test'],
-            technologies: ['HTML', 'CSS', 'ASP.NET Core', 'Visual Studio'],
+            technologies: ['HTML', 'CSS', 'JavaScript', 'ASP.NET Core', 'Entity Framework', 'SQL Server Management Studio', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
             readMoreLink: '/Projects/FizzBuzzTask',
