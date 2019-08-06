@@ -29,7 +29,7 @@ export class ProjectsSummaryTile extends React.Component<Props> {
         let project = projects.find(project => project.projectName === projName);
 
         return <div className='project-summary-tile'>
-            <img src='http://placekitten.com/300/200' alt='Card image cap' />
+            <img src={project!.attributes.img} alt={project!.attributes.imgAlt} />
             <div className='project-summary-tile-content'>
             <div className='project-summary-tile-title'>{project!.attributes.title}</div>
             {/*{project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}*/}

@@ -1,5 +1,7 @@
 ﻿//https://www.codereadability.com/replacing-if-statements-with-object-lookups/
 
+import projectImages from '../images/projects/imageImports'
+
 enum projType {
     personal = "Personal",
     university = "University",
@@ -15,6 +17,7 @@ interface IAttributes {
     technologies: string[];
     tags: string[];
     img: string;
+    imgAlt: string;
     carouselImages?: string[];
     readMoreLink: string;
     routeURL: string;
@@ -39,6 +42,7 @@ let projects: IProject[] = [
             technologies: ['tech1', 'tech2', 'tech3'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
+            imgAlt: '',
             readMoreLink: '/404',
             routeURL: '404',
             sourceCode: '',
@@ -54,6 +58,7 @@ let projects: IProject[] = [
             technologies: ['React', 'Redux', 'LESS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
+            imgAlt: '',
             readMoreLink: '/Projects/ShoothillWebsite',
             routeURL: 'Projects/ShoothillWebsite',
             sourceCode: '',
@@ -68,7 +73,8 @@ let projects: IProject[] = [
             description: ['desc', 'test', 'test'],
             technologies: ['React', 'Redux', 'LESS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
-            img: '/img/car.jpg',
+            img: projectImages.arlaBobImages.arlaBobImg1,
+            imgAlt: 'arlaBob screenshot',
             readMoreLink: '/Projects/ArlaBOB',
             routeURL: 'Projects/ArlaBOB',
             sourceCode: '',
@@ -83,7 +89,8 @@ let projects: IProject[] = [
             description: ['desc', 'test', 'test'],
             technologies: ['React', 'SASS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
-            img: '/img/car.jpg',
+            img: 'http://placekitten.com/300/200',
+            imgAlt: '',
             readMoreLink: '/Projects/Portfolio',
             routeURL: 'Projects/Portfolio',
             sourceCode: 'https://github.com/JoeCastle/Portfolio',
@@ -99,6 +106,7 @@ let projects: IProject[] = [
             technologies: ['React', 'MobX', 'SASS', 'ASP.NET Core', 'Visual Studio', 'SQL', 'SQL Server Management Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
+            imgAlt: '',
             readMoreLink: '/Projects/TrainingApp',
             routeURL: 'Projects/TrainingApp',
             sourceCode: 'https://github.com/JoeCastle/WebAppProj',
@@ -114,6 +122,7 @@ let projects: IProject[] = [
             technologies: ['C/C++', 'Arduino', 'Arduino IDE'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
+            imgAlt: '',
             readMoreLink: '/Projects/ArduinoTemperatureSensor',
             routeURL: 'Projects/ArduinoTemperatureSensor',
             sourceCode: '',
@@ -129,6 +138,7 @@ let projects: IProject[] = [
             technologies: ['HTML', 'CSS', 'JavaScript', 'VS Code'], //Include skills.ts object where JS and JavaScript can be search characteristics for the same tech.
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
+            imgAlt: '',
             readMoreLink: '/Projects/Startpage',
             routeURL: 'Projects/Startpage',
             sourceCode: 'https://github.com/RTCRhino/StartPage',
@@ -144,6 +154,7 @@ let projects: IProject[] = [
             technologies: ['React', 'MobX', 'SASS', 'Visual Studio', 'Azure Blob Storage'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
+            imgAlt: '',
             readMoreLink: '/Projects/SunWater',
             routeURL: 'Projects/SunWater',
             sourceCode: '',
@@ -159,6 +170,7 @@ let projects: IProject[] = [
             technologies: ['HTML', 'CSS', 'JavaScript', 'ASP.NET Core', 'Entity Framework', 'SQL Server Management Studio', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: '/img/car.jpg',
+            imgAlt: '',
             readMoreLink: '/Projects/FizzBuzzTask',
             routeURL: 'Projects/FizzBuzzTask',
             sourceCode: 'https://github.com/JoeCastle/FizzBuzzTask',

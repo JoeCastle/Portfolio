@@ -63,7 +63,7 @@ module.exports = (env) => {
                     test: /\.css$/,
                     loader: "style-loader!css-loader"
                 },
-                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=100000' }
+                { test: /\.(png|jpg|JPG|jpeg|gif|svg)$/, use: 'url-loader' }
             ]
         },
         plugins: [
