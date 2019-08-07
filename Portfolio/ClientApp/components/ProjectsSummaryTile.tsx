@@ -29,12 +29,14 @@ export class ProjectsSummaryTile extends React.Component<Props> {
         let project = projects.find(project => project.projectName === projName);
 
         return <div className='project-summary-tile'>
-            <img src={project!.attributes.img} alt={project!.attributes.imgAlt} />
+            <div className='project-summary-img-container'>
+                <img src={project!.attributes.img} alt={project!.attributes.imgAlt} />
+            </div>
             <div className='project-summary-tile-content'>
-            <div className='project-summary-tile-title'>{project!.attributes.title}</div>
-            {/*{project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}*/}
+                <div className='project-summary-tile-title'>{project!.attributes.title}</div>
+                {/*{project!.attributes.description.map((item, i) => <p key={i}>{item}</p>)}*/}
                 <div className='project-summary-tile-desc'>{project!.attributes.description[0]}</div>
-                </div>
+            </div>
             <Link to={project!.attributes.readMoreLink}>Read More -></Link>
             {/*<Link className='project-tile-overlay' to={project!.attributes.readMoreLink}>
                 <div className='overlay-text'>Hello World</div>

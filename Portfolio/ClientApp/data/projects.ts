@@ -1,5 +1,16 @@
 ﻿//https://www.codereadability.com/replacing-if-statements-with-object-lookups/
 
+//Other projects to include, sixthform projects, university tasks.
+//Descriptions - https://freelancing.stackexchange.com/questions/1460/developer-portfolio-screenshots-and-codesamples?rq=1
+//https://freelancing.stackexchange.com/questions/7019/can-i-show-clients-ive-worked-with-at-my-agency-on-my-personal-portfolio-site?rq=1
+//Add news report link for arla bob.
+//Djd website from year 1 web fundamentals module.
+//Say exactly what I did on the projects.
+//Say if i did the design or not.
+//Include bold note at the top of each page, saying that I didn't design it.
+//Include a key responsibilities section.
+//Include project roles section, junior developer, developer, designer, tester
+
 import projectImages from '../images/projects/imageImports'
 
 enum projType {
@@ -57,8 +68,8 @@ let projects: IProject[] = [
             description: ['descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc descdescdesc', 'test', 'test'],
             technologies: ['React', 'Redux', 'LESS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
-            img: '/img/car.jpg',
-            imgAlt: '',
+            img: projectImages.shoothillWebsiteImages.shoothillWebsiteImg1,
+            imgAlt: 'Shoothill website homepage screenshot.',
             readMoreLink: '/Projects/ShoothillWebsite',
             routeURL: 'Projects/ShoothillWebsite',
             sourceCode: '',
@@ -74,7 +85,7 @@ let projects: IProject[] = [
             technologies: ['React', 'Redux', 'LESS', 'ASP.NET Core', 'Visual Studio'],
             tags: ['tag1', 'tag2', 'tag3'],
             img: projectImages.arlaBobImages.arlaBobImg1,
-            imgAlt: 'arlaBob screenshot',
+            imgAlt: 'Arla B.O.B homepage screenshot.',
             readMoreLink: '/Projects/ArlaBOB',
             routeURL: 'Projects/ArlaBOB',
             sourceCode: '',
@@ -121,8 +132,8 @@ let projects: IProject[] = [
             description: ['desc', 'test', 'test'],
             technologies: ['C/C++', 'Arduino', 'Arduino IDE'],
             tags: ['tag1', 'tag2', 'tag3'],
-            img: '/img/car.jpg',
-            imgAlt: '',
+            img: projectImages.arduinoTemperatureSensor.arduinoTemperatureSensorImg1,
+            imgAlt: 'Picture of final Arduino board and circuit.',
             readMoreLink: '/Projects/ArduinoTemperatureSensor',
             routeURL: 'Projects/ArduinoTemperatureSensor',
             sourceCode: '',
@@ -176,6 +187,22 @@ let projects: IProject[] = [
             sourceCode: 'https://github.com/JoeCastle/FizzBuzzTask',
             liveDemo: '',
             projectType: projType.personal
+        }
+    },
+    {
+        projectName: 'itsokforyou',
+        attributes: {
+            title: 'Itsokforyou Supplies',
+            description: ['desc', 'test', 'test'],
+            technologies: ['Wordpress'],
+            tags: ['tag1', 'tag2', 'tag3'],
+            img: '/img/car.jpg',
+            imgAlt: '',
+            readMoreLink: '/Projects/Itsokforyou',
+            routeURL: 'Projects/Itsokforyou',
+            sourceCode: '',
+            liveDemo: '',
+            projectType: projType.freelance
         }
     }
 

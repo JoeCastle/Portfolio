@@ -35,8 +35,10 @@
     <None Remove="ClientApp\data\projects.ts" />
     <None Remove="ClientApp\data\skills.ts" />
     <None Remove="ClientApp\images\imageImports.ts" />
+    <None Remove="ClientApp\images\projects\arduinoTemperatureSensor\imageImports.ts" />
     <None Remove="ClientApp\images\projects\arlaBob\imageImports.ts" />
     <None Remove="ClientApp\images\projects\imageImports.ts" />
+    <None Remove="ClientApp\images\projects\shoothillWebsite\imageImports.ts" />
     <None Remove="ClientApp\typings\imageDeclarations.d.ts" />
     <None Remove="ClientApp\utils\utils.ts" />
   </ItemGroup>
@@ -54,8 +56,10 @@
     <TypeScriptCompile Include="ClientApp\components\SkillsSummaryTile.tsx" />
     <TypeScriptCompile Include="ClientApp\data\projects.ts" />
     <TypeScriptCompile Include="ClientApp\data\skills.ts" />
+    <TypeScriptCompile Include="ClientApp\images\projects\arduinoTemperatureSensor\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\images\projects\arlaBob\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\images\projects\imageImports.ts" />
+    <TypeScriptCompile Include="ClientApp\images\projects\shoothillWebsite\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\images\skills\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\RouteContainer.tsx" />
     <TypeScriptCompile Include="ClientApp\typings\imageDeclarations.d.ts" />
@@ -63,7 +67,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\images\projects\arduinoTemperatureSensor\" />
     <Folder Include="ClientApp\images\projects\trainingApp\" />
     <Folder Include="ClientApp\images\projects\portfolio\" />
     <Folder Include="ClientApp\images\projects\startPage\" />

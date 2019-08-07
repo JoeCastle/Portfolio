@@ -1,4 +1,4 @@
-﻿import arlaBobImg1 from './arlaBob_img_1.png';
+﻿import arlaBobImg1 from './arlaBob_img_1.JPG';
 import arlaBobImg2 from './arlaBob_img_2.JPG';
 import arlaBobImg3 from './arlaBob_img_3.JPG';
 import arlaBobImg4 from './arlaBob_img_4.JPG';
