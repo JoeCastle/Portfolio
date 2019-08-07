@@ -37,6 +37,7 @@
     <None Remove="ClientApp\images\imageImports.ts" />
     <None Remove="ClientApp\images\projects\arduinoTemperatureSensor\imageImports.ts" />
     <None Remove="ClientApp\images\projects\arlaBob\imageImports.ts" />
+    <None Remove="ClientApp\images\projects\fizzBuzzEurofins\imageImports.ts" />
     <None Remove="ClientApp\images\projects\imageImports.ts" />
     <None Remove="ClientApp\images\projects\shoothillWebsite\imageImports.ts" />
     <None Remove="ClientApp\typings\imageDeclarations.d.ts" />
@@ -58,6 +59,7 @@
     <TypeScriptCompile Include="ClientApp\data\skills.ts" />
     <TypeScriptCompile Include="ClientApp\images\projects\arduinoTemperatureSensor\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\images\projects\arlaBob\imageImports.ts" />
+    <TypeScriptCompile Include="ClientApp\images\projects\fizzBuzzEurofins\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\images\projects\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\images\projects\shoothillWebsite\imageImports.ts" />
     <TypeScriptCompile Include="ClientApp\images\skills\imageImports.ts" />
