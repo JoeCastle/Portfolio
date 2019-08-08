@@ -2,12 +2,16 @@
 import { RouteComponentProps } from 'react-router';
 import { SkillsSummaryTile } from './SkillsSummaryTile';
 import skills from '../data/skills';
+import useOnScreen from "../hooks/useOnScreen";
 
 interface Props extends RouteComponentProps<any>, React.Props<any> {
 }
 
-export class SkillsSummary extends React.Component<Props> {
-    public render() {
+export function SkillsSummary (props: Props) {
+    //public render() {
+
+        const ref = React.useRef() as React.MutableRefObject<HTMLInputElement>;
+    const onScreen = useOnScreen(ref, "-300px");
 
         const numOfSummarySkillsToDisplay = 16;
 
@@ -19,12 +23,18 @@ export class SkillsSummary extends React.Component<Props> {
                 <SkillsSummaryTile
                     key={i}
                     skillName={item.skillName}
-                    {...this.props}
+                    {...props}
                 />
             )
 
         return <div className='section' id='Skills'>
-            <div className='content-container'>
+            <div
+                className='content-container'
+                ref={ref}
+                style={{
+                    opacity: onScreen ? 1 : 0,
+                    transition: "opacity .5s ease-in"
+            }}>
                 <h2>Skills:</h2>
                 <p>Below is a list of skills I have:</p>
                 <div className='skill-summary-tiles'>
@@ -100,4 +110,4 @@ export class SkillsSummary extends React.Component<Props> {
             </div>
         </div>;
     }
-}
+//}

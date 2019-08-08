@@ -63,6 +63,18 @@ module.exports = (env) => {
                     test: /\.css$/,
                     loader: "style-loader!css-loader"
                 },
+                {
+                    test: /\.scss$/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            //options: {
+                            //    hmr: process.env.NODE_ENV === 'development',
+                            //},
+                        },
+                        { loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }
+                    ],
+                },
                 { test: /\.(png|jpg|JPG|jpeg|gif|svg)$/, use: 'url-loader' }
             ]
         },
@@ -85,18 +97,18 @@ module.exports = (env) => {
             rules: [
                 //{ test: /\.css$/, use: isDevBuild ? ['style-loader', 'css-loader'] : [MiniCssExtractPlugin.loader, 'css-loader'] },
                 
-                {
-                    test: /\.scss$/,
-                    use: [
-                        {
-                            loader: MiniCssExtractPlugin.loader,
-                            options: {
-                                hmr: process.env.NODE_ENV === 'development',
-                            },
-                        },
-                        { loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }
-                    ],
-                },
+                //{
+                //    test: /\.scss$/,
+                //    use: [
+                //        {
+                //            loader: MiniCssExtractPlugin.loader,
+                //            options: {
+                //                hmr: process.env.NODE_ENV === 'development',
+                //            },
+                //        },
+                //        { loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }
+                //    ],
+                //},
             ]
         },
         output: {
