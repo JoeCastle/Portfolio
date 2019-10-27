@@ -48,7 +48,7 @@ export class RouteContainer extends React.Component<Props> {
 
             <NavMenu {...this.props} />
             
-            <main id='Home'>
+            <main>
                 <Switch>
                     <Route exact path={`${match.url}`} render={(props: any) => <Home {...props} />} />
 

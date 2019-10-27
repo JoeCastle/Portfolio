@@ -2,7 +2,7 @@ import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 //import { Link, NavLink } from 'react-router-dom';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-import { HashLink as Link } from 'react-router-hash-link';
+//import { HashLink as Link } from 'react-router-hash-link';
 //const BrowserHistory = require('react-router/lib/BrowserHistory').default;
 
 
@@ -89,13 +89,13 @@ export class NavMenu extends React.Component<Props> {
                             <span className='icon-bar'></span>
                             <span className='icon-bar'></span>
                         </button>
-                        <Link className='navbar-brand' to={'/'}><h1>Joseph Castle</h1></Link>
+                        <NavLink className='navbar-brand' smooth to={'/#Home'}><h1>Joseph Castle</h1></NavLink>
                     </div>
                     <div className='clearfix'></div>
                     <div className='navbar-collapse collapse'>
                         <ul className='nav navbar-nav'>
                             <li>
-                                <NavLink to={'/'} exact activeClassName='active'>
+                                <NavLink smooth to={'/#Home'} exact activeClassName='active'>
                                     <span className='glyphicon glyphicon-home'></span> Home
                                     </NavLink>
                             </li>

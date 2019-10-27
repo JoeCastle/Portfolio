@@ -58,7 +58,7 @@ export class Home extends React.Component<Props> {
     //}
 
     public render() {
-        return <div>
+        return <div id="Home">
             <Helmet>
                 <title>Home - Joseph Castle</title>
                 <meta name="description" content="Home page" />

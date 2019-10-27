@@ -48,7 +48,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
     //const extractSiteSass = new ExtractTextPlugin('main.css');
-
+    cache: false;
+    watch: true;
+        //watchOptions: {
+        //    ignored: /node_modules/;
+        //};
+    watchOptions: {
+        aggregateTimeout: 300;
+        poll: true;
+    }
     let sharedConfig = {
         stats: { modules: false },
         resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
@@ -72,7 +80,22 @@ module.exports = (env) => {
                             //    hmr: process.env.NODE_ENV === 'development',
                             //},
                         },
-                        { loader: 'css-loader' }, { loader: 'postcss-loader', options: { config: { path: 'postcss.config.js' } } }, { loader: 'sass-loader' }
+                        {
+                            loader: 'css-loader'
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options:
+                            {
+                                config:
+                                {
+                                    path: 'postcss.config.js'
+                                }
+                            }
+                        },
+                        {
+                            loader: 'sass-loader'
+                        }
                     ],
                 },
                 { test: /\.(png|jpg|JPG|jpeg|gif|svg)$/, use: 'url-loader' }
@@ -117,6 +140,12 @@ module.exports = (env) => {
             publicPath: '/dist/',
             globalObject: 'this'
         },
+        //output: {
+        //    path: path.join(__dirname, bundleOutputDir),
+        //    publicPath: '/dist/',
+        //    filename: '[name].js',
+        //    library: '[name]_[hash]',
+        //},
         plugins: [
             new CheckerPlugin(),
             new webpack.DllReferencePlugin({
@@ -140,9 +169,15 @@ module.exports = (env) => {
         //server properties
         resolve: { mainFields: ["main"] },
         entry: { "main-server": "./ClientApp/boot-server.tsx" },
+        //output: {
+        //    libraryTarget: "commonjs",
+        //    path: path.join(__dirname, "./wwwroot/dist"),
+        //    globalObject: 'this'
+        //},
         output: {
             libraryTarget: "commonjs",
-            path: path.join(__dirname, "./wwwroot/dist"),
+            path: path.join(__dirname, bundleOutputDir),
+            //publicPath: '/dist/',
             globalObject: 'this'
         },
         target: "node",
