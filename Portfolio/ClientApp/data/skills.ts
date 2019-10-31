@@ -107,6 +107,24 @@ let skills: ISkill[] = [
         img: images.MssqlserverLogo,
         altTag: 'mssqlserver logo',
         type: skillType.software
+    },
+    {
+        skillName: 'knockoutjs',
+        img: images.MssqlserverLogo,
+        altTag: 'knockoutjs logo',
+        type: skillType.language
+    },
+    {
+        skillName: 'reactjs',
+        img: images.MssqlserverLogo,
+        altTag: 'reactjs logo',
+        type: skillType.language
+    },
+    {
+        skillName: 'mobx',
+        img: images.MssqlserverLogo,
+        altTag: 'mobx logo',
+        type: skillType.language
     }
 ];
 
