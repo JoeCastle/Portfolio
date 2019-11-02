@@ -15,7 +15,7 @@ export class NavMenu extends React.Component<Props> {
     public render() {
 
         return <nav id='main-nav' className='navmain'>
-
+             
             {/*<nav className='navbar navbar-inverse'>
                 <div className='nav-container'>
                     <div className='navbar-header'>
