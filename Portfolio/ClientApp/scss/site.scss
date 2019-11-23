@@ -109,3 +109,11 @@ footer {
 /*.thisisatest-style {
     color: red;
 }*/
+
+.section {
+    .content-container {
+        h2 {
+            font-weight: bold;
+        }
+    }
+}
